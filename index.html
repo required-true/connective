@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/main.css">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
   <script src="js/common.js"></script>
@@ -20,7 +20,119 @@
     <li><a href="#;">하단바로가기</a></li>
   </ul>
   <!-- 헤더영역시작 -->
+  <header id="header_wrap">
+    <div class="header_inner">
+      <h1 class="logo">
+        <a href="#;"><img src="./images/logo.png" alt="커넥티브로고"></a><span class="hidden">커넥티브</span>
+      </h1>
+      <nav class="topmenu">
+        <h2 class="hidden">로그인메뉴</h2>
+        <ul class="topmenu_list">
+          <li><a href="#;">로그인</a></li>
+          <li><a href="#;">회원가입</a></li>
+        </ul>
+      </nav>
+      <nav class="mainmenu">
+        <h2 class="hidden">메인메뉴</h2>
+        <ul class="mainmenu_list">
+          <li>
+            <a href="#;">지원하는 나라</a>
+          </li>
+          <li>
+            <a href="#;">커넥티브 신청</a>
+          </li>
+          <li>
+            <a href="#;">커넥티브 지원</a>
+            <ul class="submenu_list">
+              <li><a href="#;">사용자 지원</a></li>
+              <li><a href="#;">커넥터 지원</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="submenu_bar"></div>
+      </nav>
+      <div class="apply_btn"><a href="#;">커넥터 가입하기</a></div>
+    </div>
+  <div class="submenu_bg"></div>
+  </header>
+  <!-- 커넥티브검색영역시작 -->
+  <div id="search_area">
+    <h2 class="hidden">커넥티브검색</h2>
+  </div>
+  <!-- 비주얼영역시작 -->
+  <section id="visual_wrap">
+    <h2 class="hidden">메인슬라이드배너</h2>
+    <ul class="visual_list">
+      <li>
+        <img src="./images/visual_00.jpg" alt="회의중인회의실">
+        <p class="visualtext">직접 가지 말고,<br><span class="pink">현지에 있는 커넥터</span>에게 맡기세요!</p>
+      </li>
+      <li>
+        <img src="./images/visual_01.jpg" alt="방탄소년단콘서트">
+        <p class="visualtext">방탄손녀단 웸블리 콘서트<br>커넥티브 <span class="pink">D-24</span></p>
+      </li>
+      <li>
+        <img src="./images/visual_02.jpg" alt="노트북하는사람">
+        <p class="visualtext">텍스트를,<br><span class="pink">준비중</span> 입니다.</p>
+      </li>
+    </ul>
+    <div id="visualcontrol_wrap">
+      <div class="visualbar_wrap">
+        <div class="visualbar_inner"></div>
+      </div>
+      <div class="visual_left_btn"><a href="#;"></a></div>
+      <div class="visual_right_btn"><a href="#;"></a></div>
+    </div>
+  </section>
+  <!-- 컨텐츠영역시작 -->
+  <section id="contents_wrap">
+    <h2 class="hidden">메인컨텐츠</h2>
+    <!-- connectbox -->
+    <section id="category_wrap">
+      <h3 class="hidden">커넥트카테고리</h3>
+      <div class="category_inner">
+        <div class="connectbox_wrap">
+          <div class="connectbox_inner">
+            <div class="normal_connect_wrap">
+              <h3 class="connetbox_title">일반 커넥트</h3>
+              <ul class="normal_connect_list">
+                <li><a href="#;">일반 구매대행</a></li>
+                <li><a href="#;">명품 구매대행</a></li>
+                <li><a href="#;">현지배송</a></li>
+                <li><a href="#;">현지 공연 및 콘서트</a></li>
+                <li><a href="#;">유학 및 워킹홀리데이</a></li>
+                <li><a href="#;">여행</a></li>
+              </ul>
+            </div>
+            <div class="connect_title_box">
+              <p class="title_box_title">전문 커넥터</p>
+              <p class="title_box_text">전문성을 가진 커넥터가<br>시장조사, 부동산거래, 법률문제 등<br>현지의 전문적인 업무를 대신 해드립니다.</p>
+              <div class="connect_left_btn"></div>
+            </div>
+            <!-- <div class="connect_title_box">
+              <p class="title_box_title">일반 커넥터</p>
+              <p class="title_box_text">구매 대행부터 까지 해외 현지의<br>필요한 요구사항을 커넥터가<br>대신 해드립니다.</p>
+              <div class="connect_right_btn"></div>
+            </div> -->
+            <div class="pro_connect_wrap">
+              <h3 class="connetbox_title">전문 커넥트</h3>
+              <ul class="pro_connect_list">
+                <li><a href="#;">출장대행</a></li>
+                <li><a href="#;">법률문제</a></li>
+                <li><a href="#;">부동산 거래</a></li>
+                <li><a href="#;">현지사업</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+
+
+
+  <!-- 컨텐츠영역 끝 -->
+  </section>
 
 </body>
 </html>

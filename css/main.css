@@ -1,0 +1,32 @@
+/* 커넥티브 검색영역 */
+#search_area {position:absolute; left:50%; margin-left:-410px; top:118px; z-index:10; width:820px; height:80px; border:2px solid #FD5C63; border-radius:40px; background:white; box-sizing:border-box}
+
+/* 비주얼 영역 */
+#visual_wrap {overflow:hidden; float:left; position:relative; left:0; top:0; width:100%; height:500px}
+.visual_list {width:300%; height:100%}
+.visual_list li {float:left; position:relative; left:0; top:0; width:33.33%; height:100%;}
+.visualtext {position:absolute; left:18.75%; top:170px; width:520px; height:100px; font:normal 36px/46px "S_CoreDream_M"; color:white; letter-spacing:-1px}
+
+#visualcontrol_wrap {position:absolute; left:18.75%; top:280px; width:340px; height:24px}
+.visualbar_wrap {float:left; width:280px; height:6px; margin:9px 6px 0 0; background:#fff}
+.visualbar_inner {width:33.33%; height:100%; background:#5A62FF}
+.visual_left_btn {float:left; width:24px; height:24px; margin-right:6px; background:url(../images/visual_left_btn.png)no-repeat}
+.visual_right_btn {float:left; width:24px; height:24px; background:url(../images/visual_right_btn.png)no-repeat}
+.visual_left_btn a {display:block; width:100%; height:100%}
+.visual_right_btn a {display:block; width:100%; height:100%}
+
+/* 컨텐츠 영역 */
+#contents_wrap {float:left; width:100%}
+/* connectbox */
+#category_wrap {float:left; width:100%; height:640px}
+.category_inner {width:1200px; height:400px; margin:120px auto}
+.connectbox_wrap {width:100%; height:100%; border:solid 4px #FD5C63; border-radius:30px}
+.connectbox_inner {width:2000px; height:100%}
+
+.normal_connect_wrap {}
+.normal_connect_list {}
+
+.connect_title_box {}
+
+.pro_connect_wrap {}
+.pro_connect_list {}
