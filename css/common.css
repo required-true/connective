@@ -1,0 +1,10 @@
+/* 폰트 */
+@font-face { font-family: 'S-CoreDream-M'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+/* 공통 */
+#skip_menu li a {position:absolute; width:1px; height:1px; font-size:0px; line-height:0px}
+#skip_menu li a:focus {width:100%; height:30px; font:normal 14px/30px "S-CoreDream-M"; text-align:center; color:white; text-decoration:none; background:black}
+.hidden {position:absolute; width:1px; height:1px; font-size:0px; line-height:0px}
+
+/* 헤더영역 */
