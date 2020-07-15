@@ -57,16 +57,84 @@
 .count_icon {width:120px; height:120px; margin:0 auto}
 .count_count {width:100%; margin:10px 0 6px 0; font:normal 14px "S_B"; text-align:center; color:#5AEBFF}
 .count_count span {font-size:24px}
-.count_text {width:100%; font:normal 14px "S_R"; text-align:center; color:white}
+.count_text {width:100%; font:normal 12px "S_R"; text-align:center; color:white}
 .count_text span {font-size:14px}
 
 /* bestconnector */
 #best_connector_wrap {float:left; width:100%; height:741px}
-.best_title {font:normal 32px "S_B"}
-.best_connector_inner {width:1200px; height:100%; margin:0 auto}
-.best_connector_list {width:1020px; height:436px}
+.best_connector_inner {position:relative; left:0; top:0; width:1200px; height:100%; margin:0 auto}
+.best_title {position:absolute; left:0; top:120px; font:normal 32px "S_B"}
+.best_list_wrap {overflow:hidden; position:absolute; left:50%; bottom:123px; width:1020px; height:436px; margin-left:-510px}
+.best_connector_list {position:absolute; left:0; top:0; width:2100px; height:100%}
 .best_connector_list>li {float:left; width:300px; height:100%; margin-right:60px; border:solid 2px #FD5C63; border-radius:15px; box-sizing:border-box}
 .best_connector_list>li:last-child {margin-right:0}
+
+.best_sub_list {width:100%; height:386px}
+.best_sub_list li {position:relative; left:0; top:0; width:100%}
+.best_sub_list li:nth-child(1) {height:170px}
+.best_sub_list li:nth-child(2) {height:93px}
+.best_sub_list li:nth-child(3) {height:123px}
+
+.best_user_img {float:left; width:50%; height:100%; text-align:center}
+.best_user_img img {width:120px; height:120px; margin-top:25px}
+
+.best_info_wrap {float:right; width:141px; height:100%; padding:20px 20px 0 0; box-sizing:border-box}
+.best_user_name {width:100%; margin-bottom:10px; font:normal 24px "S_B"; text-align:right}
+.best_user_info {float:left; width:50%; font:normal 14px "S_M"}
+.best_user_info span{font-size:16px; color:#FD5C63}
+
+.best_user_work {width:260px; height:100%; margin-left:20px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; box-sizing:border-box;}
+.user_work {float:left; width:75%; margin-top:7px; font:normal 16px "S_B"}
+.work_price {float:left; width:25%; margin-top:9px; font:normal 14px "S_B"; color:#A9A9A9}
+
+.best_user_text {width:260px; margin:10px 0 0 20px; font:normal 14px/24px "S_R"}
+
+.click_me_btn {width:100%; height:23px; margin-top:7px; text-align:right}
+.click_me_btn a{margin-right:20px; font:normal 16px/23px "S_B"; color:#a9a9a9}
+
+.best_left_btn {position:absolute; left:0; top:371px; width:34px; height:34px; background:url(../images/best_left_btn.png)}
+.best_right_btn {position:absolute; right:0; top:371px; width:34px; height:34px; background:url(../images/best_right_btn.png)}
+.best_left_btn a,
+.best_right_btn a {display:block; width:100%; height:100%}
+
+/* review */
+#review_wrap {float:left; width:100%; height:994px; background:#FFF8EE}
+.review_inner {width:1200px; height:100%; margin:0 auto}
+
+.review_left_wrap {float:left; position:relative; left:0; top:0; width:514px; height:100%}
+.review_left_wrap::after {content:""; position:absolute; right:0; top:40px; width:2px; height:917px; background:#dadada}
+.review_left_title {margin-top:40px; font:normal 32px "S_B"}
+.review_left_text {margin:10px 0 40px 0; font:normal 20px "S_R"}
+.review_left_box {overflow:hidden; width:493px; height:632px; border:solid 4px #FD5C63; border-radius:15px; box-sizing:border-box}
+.left_box_img {width:100%; height:340px}
+.left_box_info {position:relative; left:0; top:0; width:100%; height:290px}
+.left_grade_area {float:left; width:100%; height:24px; margin-top:20px}
+.left_big_title {float:left; width:70px; margin:0 20px 0 20px; font:normal 18px "S_B"}
+.left_big_star {float:left; width:100px; height:24px}
+.left_big_star img {width:120px; height:24px}
+.left_work_area {float:left; width:100%; height:24px; margin-top:10px}
+.left_big_work {float:left; font:normal 16px/24px "S_R"}
+.left_big_text {float:left; width:453px; margin:40px 0 0 20px;; font:normal 16px "S_R"}
+.left_review_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
+.left_review_big_btn a {display:block; width:100%; height:100%}
+
+.review_right_wrap {overflow-y:scroll; float:left; width:686px; height:100%}
+.review_list_wrap {width:100%; height:1298px}
+.review_list {width:100%; height:100%; margin-top:10px}
+.review_list li {float:left; width:300px; height:386px; margin:30px 10px 0 20px}
+
+.review_right_box {overflow:hidden; width:100%; height:386px; border:solid 4px #FD5C63; border-radius:15px; box-sizing:border-box}
+.right_box_img {width:100%; height:208px}
+.right_box_info {position:relative; left:0; top:0; width:100%; height:178px}
+.right_grade_area {float:left; width:100%; height:19px; margin-top:5px}
+.right_big_title {float:left; width:65px; margin:0 20px 0 10px; font:normal 16px "S_B"}
+.right_big_star {float:left; width:116px; height:19px}
+.right_big_star img {width:116px; height:19px}
+.right_work_area {float:left; width:100%; height:24px; margin-top:10px}
+.right_big_work {float:left; font:normal 16px/24px "S_R"}
+.right_big_text {float:left; width:270px; margin:20px 0 0 10px; font:normal 14px "S_R";}
+.right_review_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
+.right_review_big_btn a {display:block; width:100%; height:100%}
 
 
 .height500 {float:left; width:100%; height:500px}
