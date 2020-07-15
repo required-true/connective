@@ -5,9 +5,11 @@
 #visual_wrap {overflow:hidden; float:left; position:relative; left:0; top:0; width:100%; height:500px}
 .visual_list {width:300%; height:100%}
 .visual_list li {float:left; position:relative; left:0; top:0; width:33.33%; height:100%;}
-.visualtext {position:absolute; left:18.75%; top:170px; width:520px; height:100px; font:normal 36px/46px "S_CoreDream_M"; color:white; letter-spacing:-1px}
+.visualtext {position:absolute; left:18.75%; top:200px; width:600px; height:100px; font:normal 36px/46px "S_M"; color:white; letter-spacing:-1px}
+.bangtan_btn {position:absolute; left:18.75%; top:370px; width:100px; height:30px; border-radius:20px; background:#5AEBFF}
+.bangtan_btn a {display:block; width:100%; height:100%; font:normal 14px/30px "S_M"; text-align:center}
 
-#visualcontrol_wrap {position:absolute; left:18.75%; top:280px; width:340px; height:24px}
+#visualcontrol_wrap {position:absolute; left:18.75%; top:310px; width:340px; height:24px}
 .visualbar_wrap {float:left; width:280px; height:6px; margin:9px 6px 0 0; background:#fff}
 .visualbar_inner {width:33.33%; height:100%; background:#5A62FF}
 .visual_left_btn {float:left; width:24px; height:24px; margin-right:6px; background:url(../images/visual_left_btn.png)no-repeat}
@@ -17,16 +19,59 @@
 
 /* 컨텐츠 영역 */
 #contents_wrap {float:left; width:100%}
-/* connectbox */
+
+/* categorybox */
 #category_wrap {float:left; width:100%; height:640px}
 .category_inner {width:1200px; height:400px; margin:120px auto}
-.connectbox_wrap {width:100%; height:100%; border:solid 4px #FD5C63; border-radius:30px}
-.connectbox_inner {width:2000px; height:100%}
+.connectbox_wrap {overflow:hidden; width:100%; height:100%; border:solid 4px #FD5C63; border-radius:30px}
+.connectbox_inner {position:relative; left:0; top:0; width:2000px; height:100%}
 
-.normal_connect_wrap {}
-.normal_connect_list {}
+.normal_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%}
+.normal_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
+.normal_connect_list {position:absolute; left:120px; top:88px; width:540px; height:280px}
+.normal_connect_list li {float:left; width:120px; height:120px; margin:0 90px 40px 0; border-radius:60px; background:#111}
+.normal_connect_list li:nth-child(3n) {margin-right:0}
+.normal_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white; transform:translateY(-50%)}
 
-.connect_title_box {}
+.connect_title_box {float:left; position:relative; left:0; top:0; width:400px; height:100%; background:linear-gradient(223.36deg, #F75C6A -22.73%, #8C61EF 90.61%)}
+.title_box_title {width:100%; margin:130px 0 20px 0; font:normal 32px "S_B"; text-align:center; color:white}
+.title_box_text {width:100%;font:normal 16px/24px "S_R"; text-align:center; color:white;}
+.connect_left_btn {position:absolute; right:20px; bottom:20px; width:34px; height:34px; background:url(../images/connectbox_left_btn.png)no-repeat}
+.connect_right_btn {position:absolute; left:20px; bottom:20px; width:34px; height:34px; background:url(../images/connectbox_right_btn.png)no-repeat}
+.connect_left_btn a,
+.connect_right_btn a {display:block; width:100%; height:100%;}
 
-.pro_connect_wrap {}
-.pro_connect_list {}
+.pro_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%}
+.pro_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
+.pro_connect_list {position:absolute; left:40px; top:50%; width:720px; height:120px; margin-top:-60px}
+.pro_connect_list li {float:left; width:120px; height:120px; margin-right:80px; border-radius:60px; background:#111}
+.pro_connect_list li:last-child {margin-right:0}
+.pro_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white; transform:translateY(-50%)}
+
+/* resultcount */
+#count_wrap {float:left; width:100%; height:340px; background:url(../images/countwrap_bg.jpg)no-repeat center/cover}
+.count_inner {width:768px; height:100%; margin:0 auto}
+.count_list {width:100%; height:100%; margin-top:65px}
+.count_list li {float:left; width:160px; height:210px; margin-right:144px}
+.count_list li:last-child {margin-right:0}
+.count_icon {width:120px; height:120px; margin:0 auto}
+.count_count {width:100%; margin:10px 0 6px 0; font:normal 14px "S_B"; text-align:center; color:#5AEBFF}
+.count_count span {font-size:24px}
+.count_text {width:100%; font:normal 14px "S_R"; text-align:center; color:white}
+.count_text span {font-size:14px}
+
+/* bestconnector */
+#best_connector_wrap {float:left; width:100%; height:741px}
+.best_title {font:normal 32px "S_B"}
+.best_connector_inner {width:1200px; height:100%; margin:0 auto}
+.best_connector_list {width:1020px; height:436px}
+.best_connector_list>li {float:left; width:300px; height:100%; margin-right:60px; border:solid 2px #FD5C63; border-radius:15px; box-sizing:border-box}
+.best_connector_list>li:last-child {margin-right:0}
+
+
+.height500 {float:left; width:100%; height:500px}
+
+/* 반응형 미디어 쿼리 */
+@media screen and (max-width:1200px){
+  #visual_wrap {height:375px}
+}

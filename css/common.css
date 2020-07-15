@@ -1,16 +1,19 @@
 /* 폰트 */
-@font-face { font-family: 'S_CoreDream_M'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'S_CoreDream_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S_M'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S_R'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 /* 공통 */
 a {text-decoration:none; color:#191919}
 img {width:100%}
 .hidden {position:absolute; width:1px; height:1px; font-size:0; line-height:0}
+.f_l {float:left}
+.f_r {float:right}
 .pink {color:#FD5C63}
 
 /* 스킵메뉴 */
 #skip_menu li a {position:absolute; width:1px; height:1px; font-size:0; line-height:0}
-#skip_menu li a:focus {width:100%; height:30px; font:normal 14px/30px "S_CoreDream_M"; text-align:center; color:white; text-decoration:none; background:#191919}
+#skip_menu li a:focus {z-index:90; width:100%; height:30px; font:normal 14px/30px "S_M"; text-align:center; color:white; text-decoration:none; background:#191919}
 
 /* 헤더영역 */
 #header_wrap {float:left; margin-bottom:80px; width:100%; height:80px; background:white; border-bottom:solid 1px #ccc}
@@ -20,26 +23,26 @@ img {width:100%}
 
 .topmenu {position:absolute; right:0; top:0; width:121px; height:100%}
 .topmenu_list {width:100%; height:100%}
-.topmenu_list li {float:left; position:relative; left:0; top:0; height:100%;font:normal 16px/80px "S_CoreDream_M"}
+.topmenu_list li {float:left; position:relative; left:0; top:0; height:100%;font:normal 16px/80px "S_M"}
 .topmenu_list li:first-child {width:47px; margin-right:12px} 
 .topmenu_list li:first-child::after {content:""; position:absolute; right:-6.5px; top:33.75px; width:1.5px; height:12.5px; background:#191919}
 .topmenu_list li:nth-child(2) {width:62px; text-align:right}
 
 .mainmenu {position:absolute; right:321px; top:0; width:331px; height:100%}
 .mainmenu_list {width:100%; height:100%}
-.mainmenu_list>li {float:left; width:97px; height:100%; margin-right:20px; font:normal 16px/80px "S_CoreDream_M"}
+.mainmenu_list>li {float:left; width:97px; height:100%; margin-right:20px; font:normal 16px/80px "S_M"}
 .mainmenu_list>li:last-child {margin-right:0}
 
 .submenu_list {margin-left:12px; width:300px; height:38px}
-.submenu_list li {float:left; width:72px; height:100%; margin-right:10px; font:normal 14px/38px "S_CoreDream_M"}
+.submenu_list li {float:left; width:72px; height:100%; margin-right:10px; font:normal 14px/38px "S_M"}
 
 .submenu_bg {position:absolute; left:0; top:81px; width:100%; height:38px; background:#F9F9F9;}
 
 .apply_btn {position:absolute; right:141px; top:15px; width:160px; height:50px; border-radius:25px; text-align:center; background:#FD5C63;}
-.apply_btn a {font:normal 16px/50px "S_CoreDream_M"; color:white}
+.apply_btn a {font:normal 16px/50px "S_M"; color:white}
 
 
 /* 반응형 미디어쿼리 */
 @media screen and (max-width:1240px){
-  #header_inner {width:96%; margin-left:2%}
+  .header_inner {width:96%; margin-left:2%}
 }
