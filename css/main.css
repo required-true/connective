@@ -3,8 +3,8 @@
 
 /* 비주얼 영역 */
 #visual_wrap {overflow:hidden; float:left; position:relative; left:0; top:0; width:100%; height:500px}
-.visual_list {width:300%; height:100%}
-.visual_list li {float:left; position:relative; left:0; top:0; width:33.33%; height:100%;}
+.visual_list {position:relative; left:0; top:0; width:300%; height:100%}
+.visual_list li {float:left; position:relative; left:0; top:0; width:33.33%; height:100%}
 .visualtext {position:absolute; left:18.75%; top:200px; width:600px; height:100px; font:normal 36px/46px "S_M"; color:white; letter-spacing:-1px}
 .bangtan_btn {position:absolute; left:18.75%; top:370px; width:100px; height:30px; border-radius:20px; background:#5AEBFF}
 .bangtan_btn a {display:block; width:100%; height:100%; font:normal 14px/30px "S_M"; text-align:center}
@@ -29,11 +29,14 @@
 .normal_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%}
 .normal_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
 .normal_connect_list {position:absolute; left:120px; top:88px; width:540px; height:280px}
-.normal_connect_list li {float:left; width:120px; height:120px; margin:0 90px 40px 0; border-radius:60px; background:#111}
+.normal_connect_list li {float:left; width:120px; height:120px; margin:0 90px 40px 0; border-radius:60px; background:#111; transition:0.3s ease}
+.normal_connect_list li:hover {background:#222}
 .normal_connect_list li:nth-child(3n) {margin-right:0}
 .normal_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white; transform:translateY(-50%)}
 
-.connect_title_box {float:left; position:relative; left:0; top:0; width:400px; height:100%; background:linear-gradient(223.36deg, #F75C6A -22.73%, #8C61EF 90.61%)}
+.connect_title_box {float:left; position:relative; left:0; top:0; width:400px; height:100%}
+.connect_title_box::after {position:absolute; left:0; top:0; z-index:-1; content:""; width:100%; height:100%; background:linear-gradient(223.36deg, #F75C6A -22.73%, #8C61EF 90.61%);}
+.box_selected::after {transform:rotate(180deg)}
 .title_box_title {width:100%; margin:130px 0 20px 0; font:normal 32px "S_B"; text-align:center; color:white}
 .title_box_text {width:100%;font:normal 16px/24px "S_R"; text-align:center; color:white;}
 .connect_left_btn {position:absolute; right:20px; bottom:20px; width:34px; height:34px; background:url(../images/connectbox_left_btn.png)no-repeat}
@@ -41,11 +44,12 @@
 .connect_left_btn a,
 .connect_right_btn a {display:block; width:100%; height:100%;}
 
-.pro_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%}
+.pro_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%; opacity:0}
 .pro_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
 .pro_connect_list {position:absolute; left:40px; top:50%; width:720px; height:120px; margin-top:-60px}
-.pro_connect_list li {float:left; width:120px; height:120px; margin-right:80px; border-radius:60px; background:#111}
+.pro_connect_list li {float:left; width:120px; height:120px; margin-right:80px; border-radius:60px; background:#111; transition:0.3s ease}
 .pro_connect_list li:last-child {margin-right:0}
+.pro_connect_list li:hover {background:#222}
 .pro_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white; transform:translateY(-50%)}
 
 /* resultcount */
@@ -98,7 +102,7 @@
 .best_right_btn a {display:block; width:100%; height:100%}
 
 /* review */
-#review_wrap {float:left; width:100%; height:994px; background:#FFF8EE}
+#review_wrap {float:left; width:100%; height:1298px; background:#FFF8EE}
 .review_inner {width:1200px; height:100%; margin:0 auto}
 
 .review_left_wrap {float:left; position:relative; left:0; top:0; width:514px; height:100%}
@@ -117,7 +121,7 @@
 .left_review_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
 .left_review_big_btn a {display:block; width:100%; height:100%}
 
-.review_right_wrap {overflow-y:scroll; float:left; width:686px; height:100%}
+.review_right_wrap {float:left; width:686px; height:100%}
 .review_list_wrap {width:100%; height:1298px}
 .review_list {width:100%; height:100%; margin-top:10px}
 .review_list li {float:left; width:300px; height:386px; margin:30px 10px 0 20px}
