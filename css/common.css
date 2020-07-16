@@ -50,6 +50,35 @@ img {width:100%}
 .apply_btn {position:absolute; right:141px; top:15px; width:160px; height:50px; border-radius:25px; text-align:center; background:#FD5C63;}
 .apply_btn a {font:normal 16px/50px "S_M"; color:white}
 
+/* 푸터여역 */
+#footer_wrap {float:left; width:100%; height:252px; background:#80A7B8}
+.foouter_inner {width:1200px; height:100%; margin:0 auto}
+
+.foonter_top {width:100%; height:186px; border-bottom:solid 1px #333; box-sizing:border-box}
+.footer_menu {float:left; width:850px; height:100px; margin:40px 0 0 58px}
+.footer_menu_list {width:100%; height:100%}
+.footer_menu_list>li {float:left; width:20%; height:100%; text-align:center}
+.footer_menu_list>li>a {font:normal 16px "S_M"}
+.footer_submenu_list {width:100%; height:100%; margin-top:4px}
+.footer_submenu_list li {width:100%; height:16px; margin-top:6px}
+.footer_submenu_list li a {font:normal 12px "S_R"}
+
+.global_lang {float:right; width:110px; height:24px; margin:34px 100px 0 0;}
+.global_lang a {display:block; width:100%; height:100%; font:normal 16px/24px "S_M"}
+.global_lang img {width:24px; height:24px; transform:translateY(5px);}
+
+.footer_bottom {width:100%; height:66px;}
+.copyright_wrap {float:left; width:800px; height:20px; margin-top:20px;}
+.copyright_connective {float:left; margin-right:20px; font:normal 14px "S_R"}
+.footer_infomenu {float:left; margin-right:20px; font:normal 14px "S_R"}
+.footer_infomenu a {display:block; width:100%; height:100%}
+
+.sns_wrap {float:right; width:204px; margin-top:10px}
+.sns_list {width:204px; height:36px;}
+.sns_list li {float:left; width:36px; height:36px; margin-left:20px}
+.sns_list li:first-child {margin-left:0}
+.sns_list li a {display:block; width:100%; height:100%}
+
 
 /* 반응형 미디어쿼리 */
 @media screen and (max-width:1240px){

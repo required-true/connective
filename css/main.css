@@ -110,8 +110,7 @@
 .left_box_info {position:relative; left:0; top:0; width:100%; height:290px}
 .left_grade_area {float:left; width:100%; height:24px; margin-top:20px}
 .left_big_title {float:left; width:70px; margin:0 20px 0 20px; font:normal 18px "S_B"}
-.left_big_star {float:left; width:100px; height:24px}
-.left_big_star img {width:120px; height:24px}
+.left_big_star {float:left; width:130px; height:24px; font-size:18px; line-height:24px; color:#FFE600}
 .left_work_area {float:left; width:100%; height:24px; margin-top:10px}
 .left_big_work {float:left; font:normal 16px/24px "S_R"}
 .left_big_text {float:left; width:453px; margin:40px 0 0 20px;; font:normal 16px "S_R"}
@@ -128,15 +127,54 @@
 .right_box_info {position:relative; left:0; top:0; width:100%; height:178px}
 .right_grade_area {float:left; width:100%; height:19px; margin-top:5px}
 .right_big_title {float:left; width:65px; margin:0 20px 0 10px; font:normal 16px "S_B"}
-.right_big_star {float:left; width:116px; height:19px}
-.right_big_star img {width:116px; height:19px}
+.right_big_star {float:left; width:116px; height:19px; line-height:19px; color:#FFE600}
 .right_work_area {float:left; width:100%; height:24px; margin-top:10px}
 .right_big_work {float:left; font:normal 16px/24px "S_R"}
 .right_big_text {float:left; width:270px; margin:20px 0 0 10px; font:normal 14px "S_R";}
 .right_review_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
 .right_review_big_btn a {display:block; width:100%; height:100%}
 
+/* connective subvisual */
+#subvisual_wrap {float:left; width:100%; height:460px; margin:120px 0 120px 0; background:url(../images/sub_visual_bg.png)repeat-x}
+.subvisual_inner {width:1200px; height:100%; margin:0 auto}
 
+.subvisual_left {float:left; width:320px; height:100%}
+.subvisual_title {width:100%; height:45px; margin-top:30px; font:normal 32px "S_B"}
+.sub_text_wrap {overflow:hidden; width:100%; height:170px; margin-top:90px;}
+.sub_test_list {width:300%; height:100%}
+.sub_test_list li {float:left; width:320px; height:100%}
+.sub_text_title {font:normal 36px "S_M"; color:white}
+.sub_text_text {margin:10px 0 20px 0; font:normal 18px "S_R"; color:white}
+.sub_text_text span {font-family:"S_B"}
+.sub_link_btn {width:150px; height:40px; border-radius:20px; background:#7178FF;}
+.sub_link_btn a {display:block; width:100%; height:100%; font:normal 16px/40px "S_B"; text-align:center; color:white}
+
+.sub_ctrl_wrap {width:100%; height:24px; margin:15px 0 0 200px}
+.paging_wrap {float:left; width:30px; height:100%; font:normal 16px "S_R"; color:white;}
+.sub_left_btn {float:left; width:24px; height:24px; margin:0 10px 0 8px; background:url(../images/visual_left_btn.png)no-repeat}
+.sub_right_btn {float:left; width:24px; height:24px; background:url(../images/visual_right_btn.png)no-repeat}
+.sub_left_btn a,
+.sub_right_btn a {display:block; width:100%; height:100%}
+
+.subvisual_right {float:right; width:680px; height:100%}
+.sub_visual_list {position:relative; left:0; top:0; width:100%; height:100%}
+.sub_visual_list li {float:left; position:absolute; width:640px; height:420px}
+.sub_visual_list li:nth-child(1) {z-index:20; right:40px; top:40px}
+.sub_visual_list li:nth-child(2) {z-index:10; right:20px; top:20px}
+.sub_visual_list li:nth-child(3) {right:0; top:0}
+
+/* connective support */
+#support_wrap {float:left; width:100%; height:388px}
+.support_inner {width:1200px; height:100%; margin:0 auto}
+.support_title {font:normal 32px "S_B"}
+.support_wrap {width:505px; height:320px; background:#FFF8EE}
+.support_title_wrap {width:470px; height:75px; margin:0 auto; border-bottom:solid 2px #000 }
+.support_board_title {float:left; width:90%; height:32px; padding-top:38px; font:normal 28px/32px "S_R"}
+.support_more_btn {float:right; width:24px; height:24px; margin-top:42px; background:url(../images/plus_icon.png)no-repeat}
+.support_more_btn a {display:block; width:100%; height:100%}
+.support_list {width:470px; height:273px; margin:5px auto 0 auto}
+.support_list li {margin-top:15px; font:normal 20px "S_R"}
+/* ㄴㅁㅇㅁㅇㅁㄴㄻ */
 .height500 {float:left; width:100%; height:500px}
 
 /* 반응형 미디어 쿼리 */
