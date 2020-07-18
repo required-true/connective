@@ -7,6 +7,7 @@
 .visual_list li {float:left; position:relative; left:0; top:0; width:33.33%; height:100%}
 .visualtext {position:absolute; left:18.75%; top:200px; width:600px; height:100px; font:normal 36px/46px "S_M"; color:white; letter-spacing:-1px}
 .bangtan_btn {position:absolute; left:18.75%; top:370px; width:100px; height:30px; border-radius:20px; background:#5AEBFF}
+.bangtan_btn:hover {background:#4EC6D7}
 .bangtan_btn a {display:block; width:100%; height:100%; font:normal 14px/30px "S_M"; text-align:center}
 
 #visualcontrol_wrap {position:absolute; left:18.75%; top:310px; width:340px; height:24px}
@@ -24,16 +25,19 @@
 #category_wrap {float:left; width:100%; height:640px}
 .category_inner {width:1200px; height:400px; margin:120px auto}
 .connectbox_wrap {overflow:hidden; width:100%; height:100%; border:solid 4px #FD5C63; border-radius:30px}
-.connectbox_inner {position:relative; left:0; top:0; width:2000px; height:100%}
+.connectbox_inner {position:relative; left:0; top:0; width:2400px; height:100%}
 
+.fixed_box {float:left; position:relative; left:0; top:0; z-index:10; width:1200px; height:100%; background:#fff}
 .normal_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%}
 .normal_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
-.normal_connect_list {position:absolute; left:120px; top:88px; width:540px; height:280px}
+.normal_text {position: absolute; left:17px; top:62px; font:normal 14px "S_R"}
+.normal_connect_list {position:absolute; left:120px; top:100px; width:540px; height:280px}
 .normal_connect_list li {float:left; width:120px; height:120px; margin:0 90px 40px 0; border-radius:60px; background:#111; transition:0.3s ease}
 .normal_connect_list li:hover {background:#222}
 .normal_connect_list li:nth-child(3n) {margin-right:0}
 .normal_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white; transform:translateY(-50%)}
 
+.moving_box {float:left; position:relative; left:-400px; top:0; z-index:0; width:1200px; height:100%; background:#fff}
 .connect_title_box {float:left; position:relative; left:0; top:0; width:400px; height:100%}
 .connect_title_box::after {position:absolute; left:0; top:0; z-index:-1; content:""; width:100%; height:100%; background:linear-gradient(223.36deg, #F75C6A -22.73%, #8C61EF 90.61%);}
 .box_selected::after {transform:rotate(180deg)}
@@ -46,7 +50,8 @@
 
 .pro_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%; opacity:0}
 .pro_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
-.pro_connect_list {position:absolute; left:40px; top:50%; width:720px; height:120px; margin-top:-60px}
+.pro_text {position:absolute; lefT:17px; top:62px; font:normal 14px "S_R"}
+.pro_connect_list {position:absolute; left:40px; top:160px; width:720px; height:120px}
 .pro_connect_list li {float:left; width:120px; height:120px; margin-right:80px; border-radius:60px; background:#111; transition:0.3s ease}
 .pro_connect_list li:last-child {margin-right:0}
 .pro_connect_list li:hover {background:#222}
@@ -105,11 +110,10 @@
 #review_wrap {float:left; width:100%; height:1298px; background:#FFF8EE}
 .review_inner {width:1200px; height:100%; margin:0 auto}
 
-.review_left_wrap {float:left; position:relative; left:0; top:0; width:514px; height:100%}
-.review_left_wrap::after {content:""; position:absolute; right:0; top:40px; width:2px; height:917px; background:#dadada}
+.review_left_wrap {float:left; position:relative; left:0; top:0; width:514px; height:820px}
 .review_left_title {margin-top:40px; font:normal 32px "S_B"}
 .review_left_text {margin:10px 0 40px 0; font:normal 20px "S_R"}
-.review_left_box {overflow:hidden; width:493px; height:632px; border:solid 4px #FD5C63; border-radius:15px; box-sizing:border-box}
+.review_left_box {overflow:hidden; position:relative; left:0; top:0; width:493px; height:632px; border:solid 4px #FD5C63; border-radius:15px; background:#fff; box-sizing:border-box}
 .left_box_img {width:100%; height:340px}
 .left_box_info {position:relative; left:0; top:0; width:100%; height:290px}
 .left_grade_area {float:left; width:100%; height:24px; margin-top:20px}
@@ -118,25 +122,28 @@
 .left_work_area {float:left; width:100%; height:24px; margin-top:10px}
 .left_big_work {float:left; font:normal 16px/24px "S_R"}
 .left_big_text {float:left; width:453px; margin:40px 0 0 20px;; font:normal 16px "S_R"}
-.left_review_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
-.left_review_big_btn a {display:block; width:100%; height:100%}
+.left_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
+.left_big_btn a {display:block; width:100%; height:100%}
+.best_btn {position:absolute; right:10px; top:10px; width:68px; height:34px; font:normal 14px/34px "S_B"; color:white; text-align:center; border-radius:17px; background:#7178FF}
 
-.review_right_wrap {float:left; width:686px; height:100%}
+.review_right_wrap {float:left; position:relative; left:0; top:0; width:686px; height:100%}
+.review_right_wrap::after {content:""; position:absolute; left:0; top:40px; width:2px; height:1218px; background:#dadada}
 .review_list_wrap {width:100%; height:1298px}
 .review_list {width:100%; height:100%; margin-top:10px}
 .review_list li {float:left; width:300px; height:386px; margin:30px 10px 0 20px}
 
-.review_right_box {overflow:hidden; width:100%; height:386px; border:solid 4px #FD5C63; border-radius:15px; box-sizing:border-box}
+.review_right_box {overflow:hidden; width:100%; height:386px; border:solid 4px #FD5C63; border-radius:15px; background:#fff; box-sizing:border-box}
 .right_box_img {width:100%; height:208px}
 .right_box_info {position:relative; left:0; top:0; width:100%; height:178px}
 .right_grade_area {float:left; width:100%; height:19px; margin-top:5px}
 .right_big_title {float:left; width:65px; margin:0 20px 0 10px; font:normal 16px "S_B"}
 .right_big_star {float:left; width:116px; height:19px; line-height:19px; color:#FFE600}
+.right_big_star i {width:16px; height:16px; font-size:16px; line-height:16px; color:#FFE600}
 .right_work_area {float:left; width:100%; height:24px; margin-top:10px}
 .right_big_work {float:left; font:normal 16px/24px "S_R"}
-.right_big_text {float:left; width:270px; margin:20px 0 0 10px; font:normal 14px "S_R";}
-.right_review_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
-.right_review_big_btn a {display:block; width:100%; height:100%}
+.right_big_text {float:left; width:270px; margin:20px 0 0 10px; font:normal 14px "S_R"}
+.right_more_btn {position:absolute; right:10px; bottom:15px; width:30px; height:15px}
+.right_more_btn a {display:block; width:100%; height:100%; font:normal 12px "S_B"; color:#a9a9a9}
 
 /* connective subvisual */
 #subvisual_wrap {float:left; width:100%; height:460px; margin:120px 0 120px 0; background:url(../images/sub_visual_bg.png)repeat-x}
@@ -145,7 +152,7 @@
 .subvisual_left {float:left; width:320px; height:100%}
 .subvisual_title {width:100%; height:45px; margin-top:30px; font:normal 32px "S_B"}
 .sub_text_wrap {overflow:hidden; width:100%; height:170px; margin-top:90px;}
-.sub_test_list {width:300%; height:100%}
+.sub_test_list {position:relative; left:0px; top:0; width:300%; height:100%}
 .sub_test_list li {float:left; width:320px; height:100%}
 .sub_text_title {font:normal 36px "S_M"; color:white}
 .sub_text_text {margin:10px 0 20px 0; font:normal 18px "S_R"; color:white}
@@ -162,13 +169,13 @@
 
 .subvisual_right {float:right; width:680px; height:100%}
 .sub_visual_list {position:relative; left:0; top:0; width:100%; height:100%}
-.sub_visual_list li {float:left; position:absolute; width:640px; height:420px}
+.sub_visual_list li {float:left; position:absolute; width:640px; height:420px; transition:0.5s ease;}
 .sub_visual_list li:nth-child(1) {z-index:20; right:40px; top:40px}
 .sub_visual_list li:nth-child(2) {z-index:10; right:20px; top:20px}
 .sub_visual_list li:nth-child(3) {right:0; top:0}
 
 /* connective support */
-#support_wrap {float:left; width:100%; height:388px}
+#support_wrap {float:left; width:100%; height:388px; margin-bottom:120px}
 .support_inner {width:1200px; height:100%; margin:0 auto}
 .support_title {font:normal 32px "S_B"}
 .support_wrap {width:505px; height:320px; background:#FFF8EE}
@@ -178,8 +185,34 @@
 .support_more_btn a {display:block; width:100%; height:100%}
 .support_list {width:470px; height:273px; margin:5px auto 0 auto}
 .support_list li {margin-top:15px; font:normal 20px "S_R"}
-/* ㄴㅁㅇㅁㅇㅁㄴㄻ */
-.height500 {float:left; width:100%; height:500px}
+
+/* app */
+#app_wrap {float:left; width:100%; height:498px; margin-bottom:150px}
+.app_inner {width:1200px; height:100%; margin:0 auto}
+
+.app_left_wrap {float:left; width:600px; height:100%}
+.app_text {float:left; width:550px; height:205px; margin:100px 0 0 40px; font:normal 48px/72px "S_M"}
+.app_btn_wrap {float:left; width:300px; height:40px; margin:40px 0 0 40px}
+.googleplay_btn {float:left; width:140px; height:40px; margin-right:20px; background:url(../images/Google_Play.png)no-repeat}
+.applestore_btn {float:left; width:140px; height:40px; background:url(../images/App_Store.png)no-repeat}
+.googleplay_btn a,
+.applestore_btn a {display:block; width:100%; height:100%}
+
+.app_right_wrap {float:right; position:relative; left:0; top:0; width:600px; height:100%}
+.app_wrap_img {position:absolute; left:0; top:0; width:100%; height:100%}
+.app_inner_img {overflow:hidden; position:absolute; left:231px; top:65px; width:170px; height:370px}
+.inner_img_list {position:absolute; left:0px; top:0; width:540px; height:100%}
+.inner_img_list li {float:left; width:170px; height:100%}
+.inner_img_list li:nth-child(1) {background:#eee}
+.inner_img_list li:nth-child(2) {background:#aaa}
+.inner_img_list li:nth-child(3) {background:#777}
+
+
+.app_dot_list {position:absolute; left:292px; bottom:23px; width:40px; height:8px}
+.app_dot_list li {float:left; width:8px; height:8px; margin-right:8px; border-radius:8px; background:#FD5C63; opacity:0.6 }
+.app_dot_list li:last-child {margin-right:0}
+.app_dot_list li a {display:block; width:100%; height:100%}
+.app_dot_list li.active_dot {opacity:1}
 
 /* 반응형 미디어 쿼리 */
 @media screen and (max-width:1200px){
