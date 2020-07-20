@@ -1,12 +1,38 @@
 /* 커넥티브 검색영역 */
-#search_area {position:absolute; left:50%; margin-left:-410px; top:118px; z-index:10; width:820px; height:80px; border:2px solid #FD5C63; border-radius:40px; background:white; box-sizing:border-box}
-
+#search_area {position:absolute; left:50%; margin-left:-410px; top:118px; z-index:10; width:820px; height:80px; border:2px solid #FD5C63; background:#fff;
+   -webkit-border-radius:40px; -webkit-box-sizing:border-box;
+   -moz-border-radius:40px; -moz-box-sizing:border-box;
+   border-radius:40px; box-sizing:border-box
+  }
+  #search_wrap {width:742px; height:40px; margin:20px auto 0 auto}
+  .search_title {font:normal 12px "S_M"}
+  .country_wrap {float:left; position:relative; left:0; top:0; width:150px; height:100%; padding-right:20px}
+  .country_wrap::after {content:""; position:absolute; right:0; top:0px; width:1px; height:40px; background:#ccc}
+  .works_wrap {float:left; position:relative; left:0; top:0; width:158px; height:100%; padding:0 15px}
+  .works_wrap::after {content:""; position:absolute; right:0; top:0px; width:1px; height:40px; background:#ccc}
+  .search_select {font:normal 14px "S_M"; color:#ccc}
+  .search_select optgroup {font:normal 14px "S_B"; color:#000}
+  .search_select option {font:normal 14px "S_M"; color:#000}
+  .date_wrap {float:left; width:180px; height:100%; padding:0 20px}
+  .date_picker {font:normal 14px "S_M"; color:#000}
+  .date_picker::placeholder {color:#ccc}
+  .button_wrap {float:left; width:122px; height:100%}
+  .search_btn {float:right; width:120px; height:40px; font:normal 14px "S_M"; color:#fff; background:#5A62FF; cursor:pointer;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+  }
+  .search_btn:hover {background:#454BC2}
 /* 비주얼 영역 */
 #visual_wrap {overflow:hidden; float:left; position:relative; left:0; top:0; width:100%; height:500px}
 .visual_list {position:relative; left:0; top:0; width:300%; height:100%}
 .visual_list li {float:left; position:relative; left:0; top:0; width:33.33%; height:100%}
 .visualtext {position:absolute; left:18.75%; top:200px; width:600px; height:100px; font:normal 36px/46px "S_M"; color:white; letter-spacing:-1px}
-.bangtan_btn {position:absolute; left:18.75%; top:370px; width:100px; height:30px; border-radius:20px; background:#5AEBFF}
+.bangtan_btn {position:absolute; left:18.75%; top:370px; width:100px; height:30px; background:#5AEBFF;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border-radius:20px;
+}
 .bangtan_btn:hover {background:#4EC6D7}
 .bangtan_btn a {display:block; width:100%; height:100%; font:normal 14px/30px "S_M"; text-align:center}
 
@@ -24,7 +50,11 @@
 /* categorybox */
 #category_wrap {float:left; width:100%; height:640px}
 .category_inner {width:1200px; height:400px; margin:120px auto}
-.connectbox_wrap {overflow:hidden; width:100%; height:100%; border:solid 4px #FD5C63; border-radius:30px}
+.connectbox_wrap {overflow:hidden; width:100%; height:100%; border:solid 4px #FD5C63;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  border-radius:30px
+}
 .connectbox_inner {position:relative; left:0; top:0; width:2400px; height:100%}
 
 .fixed_box {float:left; position:relative; left:0; top:0; z-index:10; width:1200px; height:100%; background:#fff}
@@ -32,17 +62,34 @@
 .normal_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
 .normal_text {position: absolute; left:17px; top:62px; font:normal 14px "S_R"}
 .normal_connect_list {position:absolute; left:120px; top:100px; width:540px; height:280px}
-.normal_connect_list li {float:left; width:120px; height:120px; margin:0 90px 40px 0; border-radius:60px; background:#111; transition:0.3s ease}
+.normal_connect_list li {float:left; width:120px; height:120px; margin:0 90px 40px 0; background:#111;
+  -webkit-border-radius:60px; -webkit-transition:0.3s ease;
+  -moz-border-radius:60px; -moz-transition:0.3s ease;
+  border-radius:60px; -o-transition:0.3s ease;
+  transition:0.3s ease
+  }
 .normal_connect_list li:hover {background:#222}
 .normal_connect_list li:nth-child(3n) {margin-right:0}
-.normal_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white; transform:translateY(-50%)}
+.normal_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white;
+  -webkit-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%)
+  }
 
 .moving_box {float:left; position:relative; left:-400px; top:0; z-index:0; width:1200px; height:100%; background:#fff}
 .connect_title_box {float:left; position:relative; left:0; top:0; width:400px; height:100%}
-.connect_title_box::after {position:absolute; left:0; top:0; z-index:-1; content:""; width:100%; height:100%; background:linear-gradient(223.36deg, #F75C6A -22.73%, #8C61EF 90.61%);}
-.box_selected::after {transform:rotate(180deg)}
+.connect_title_box::after {position:absolute; left:0; top:0; z-index:-1; content:""; width:100%; height:100%; background:linear-gradient(223.36deg, #F75C6A -22.73%, #8C61EF 90.61%)}
+.box_selected::after {
+  -webkit-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
 .title_box_title {width:100%; margin:130px 0 20px 0; font:normal 32px "S_B"; text-align:center; color:white}
-.title_box_text {width:100%;font:normal 16px/24px "S_R"; text-align:center; color:white;}
+.title_box_text {width:100%; font:normal 16px/24px "S_R"; text-align:center; color:white;}
 .connect_left_btn {position:absolute; right:20px; bottom:20px; width:34px; height:34px; background:url(../images/connectbox_left_btn.png)no-repeat}
 .connect_right_btn {position:absolute; left:20px; bottom:20px; width:34px; height:34px; background:url(../images/connectbox_right_btn.png)no-repeat}
 .connect_left_btn a,
@@ -52,10 +99,21 @@
 .pro_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
 .pro_text {position:absolute; lefT:17px; top:62px; font:normal 14px "S_R"}
 .pro_connect_list {position:absolute; left:40px; top:160px; width:720px; height:120px}
-.pro_connect_list li {float:left; width:120px; height:120px; margin-right:80px; border-radius:60px; background:#111; transition:0.3s ease}
+.pro_connect_list li {float:left; width:120px; height:120px; margin-right:80px; background:#111;
+  -webkit-border-radius:60px; -webkit-transition:0.3s ease;
+  -moz-border-radius:60px; -moz-transition:0.3s ease;
+  border-radius:60px; -o-transition:0.3s ease;
+  transition:0.3s ease;
+}
 .pro_connect_list li:last-child {margin-right:0}
 .pro_connect_list li:hover {background:#222}
-.pro_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white; transform:translateY(-50%)}
+.pro_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white;
+  -webkit-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%)
+}
 
 /* resultcount */
 #count_wrap {float:left; width:100%; height:340px; background:url(../images/countwrap_bg.jpg)no-repeat center/cover}
@@ -75,7 +133,12 @@
 .best_title {position:absolute; left:0; top:120px; font:normal 32px "S_B"}
 .best_list_wrap {overflow:hidden; position:absolute; left:50%; bottom:123px; width:1020px; height:436px; margin-left:-510px}
 .best_connector_list {position:absolute; left:0; top:0; width:2100px; height:100%}
-.best_connector_list>li {float:left; width:300px; height:100%; margin-right:60px; border:solid 2px #FD5C63; border-radius:15px; box-sizing:border-box}
+.best_connector_list>li {float:left; width:300px; height:100%; margin-right:60px; border:solid 2px #FD5C63;
+  -webkit-border-radius:15px; -webkit-box-sizing:border-box;
+  -moz-border-radius:15px; -moz-box-sizing:border-box;
+  border-radius:15px; box-sizing:border-box
+  
+}
 .best_connector_list>li:last-child {margin-right:0}
 
 .best_sub_list {width:100%; height:386px}
@@ -87,12 +150,20 @@
 .best_user_img {float:left; width:50%; height:100%; text-align:center}
 .best_user_img img {width:120px; height:120px; margin-top:25px}
 
-.best_info_wrap {float:right; width:141px; height:100%; padding:20px 20px 0 0; box-sizing:border-box}
+.best_info_wrap {float:right; width:141px; height:100%; padding:20px 20px 0 0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
 .best_user_name {width:100%; margin-bottom:10px; font:normal 24px "S_B"; text-align:right}
 .best_user_info {float:left; width:50%; font:normal 14px "S_M"}
 .best_user_info span{font-size:16px; color:#FD5C63}
 
-.best_user_work {width:260px; height:100%; margin-left:20px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; box-sizing:border-box;}
+.best_user_work {width:260px; height:100%; margin-left:20px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
 .user_work {float:left; width:75%; margin-top:7px; font:normal 16px "S_B"}
 .work_price {float:left; width:25%; margin-top:9px; font:normal 14px "S_B"; color:#A9A9A9}
 
@@ -113,7 +184,11 @@
 .review_left_wrap {float:left; position:relative; left:0; top:0; width:514px; height:820px}
 .review_left_title {margin-top:40px; font:normal 32px "S_B"}
 .review_left_text {margin:10px 0 40px 0; font:normal 20px "S_R"}
-.review_left_box {overflow:hidden; position:relative; left:0; top:0; width:493px; height:632px; border:solid 4px #FD5C63; border-radius:15px; background:#fff; box-sizing:border-box}
+.review_left_box {overflow:hidden; position:relative; left:0; top:0; width:493px; height:632px; border:solid 4px #FD5C63; background:#fff;
+  -webkit-border-radius:15px; -webkit-box-sizing:border-box;
+  -moz-border-radius:15px; -moz-box-sizing:border-box;
+  border-radius:15px; box-sizing:border-box
+}
 .left_box_img {width:100%; height:340px}
 .left_box_info {position:relative; left:0; top:0; width:100%; height:290px}
 .left_grade_area {float:left; width:100%; height:24px; margin-top:20px}
@@ -124,7 +199,11 @@
 .left_big_text {float:left; width:453px; margin:40px 0 0 20px;; font:normal 16px "S_R"}
 .left_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
 .left_big_btn a {display:block; width:100%; height:100%}
-.best_btn {position:absolute; right:10px; top:10px; width:68px; height:34px; font:normal 14px/34px "S_B"; color:white; text-align:center; border-radius:17px; background:#7178FF}
+.best_btn {position:absolute; right:10px; top:10px; width:68px; height:34px; font:normal 14px/34px "S_B"; color:white; text-align:center; background:#7178FF;
+  -webkit-border-radius:17px;
+  -moz-border-radius:17px;
+  border-radius:17px;
+}
 
 .review_right_wrap {float:left; position:relative; left:0; top:0; width:686px; height:100%}
 .review_right_wrap::after {content:""; position:absolute; left:0; top:40px; width:2px; height:1218px; background:#dadada}
@@ -132,7 +211,11 @@
 .review_list {width:100%; height:100%; margin-top:10px}
 .review_list li {float:left; width:300px; height:386px; margin:30px 10px 0 20px}
 
-.review_right_box {overflow:hidden; width:100%; height:386px; border:solid 4px #FD5C63; border-radius:15px; background:#fff; box-sizing:border-box}
+.review_right_box {overflow:hidden; width:100%; height:386px; border:solid 4px #FD5C63; background:#fff;
+  -webkit-border-radius:15px; -webkit-box-sizing:border-box;
+  -moz-border-radius:15px; -moz-box-sizing:border-box;
+  border-radius:15px; box-sizing:border-box
+}
 .right_box_img {width:100%; height:208px}
 .right_box_info {position:relative; left:0; top:0; width:100%; height:178px}
 .right_grade_area {float:left; width:100%; height:19px; margin-top:5px}
@@ -157,7 +240,11 @@
 .sub_text_title {font:normal 36px "S_M"; color:white}
 .sub_text_text {margin:10px 0 20px 0; font:normal 18px "S_R"; color:white}
 .sub_text_text span {font-family:"S_B"}
-.sub_link_btn {width:150px; height:40px; border-radius:20px; background:#7178FF;}
+.sub_link_btn {width:150px; height:40px; background:#7178FF;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border-radius:20px;
+}
 .sub_link_btn a {display:block; width:100%; height:100%; font:normal 16px/40px "S_B"; text-align:center; color:white}
 
 .sub_ctrl_wrap {width:100%; height:24px; margin:15px 0 0 200px}
@@ -169,7 +256,12 @@
 
 .subvisual_right {float:right; width:680px; height:100%}
 .sub_visual_list {position:relative; left:0; top:0; width:100%; height:100%}
-.sub_visual_list li {float:left; position:absolute; width:640px; height:420px; transition:0.5s ease;}
+.sub_visual_list li {float:left; position:absolute; width:640px; height:420px;
+  -webkit-transition:0.5s ease;
+  -moz-transition:0.5s ease;
+  -o-transition:0.5s ease;
+  transition:0.5s ease
+}
 .sub_visual_list li:nth-child(1) {z-index:20; right:40px; top:40px}
 .sub_visual_list li:nth-child(2) {z-index:10; right:20px; top:20px}
 .sub_visual_list li:nth-child(3) {right:0; top:0}
@@ -209,7 +301,11 @@
 
 
 .app_dot_list {position:absolute; left:292px; bottom:23px; width:40px; height:8px}
-.app_dot_list li {float:left; width:8px; height:8px; margin-right:8px; border-radius:8px; background:#FD5C63; opacity:0.6 }
+.app_dot_list li {float:left; width:8px; height:8px; margin-right:8px; background:#FD5C63; opacity:0.6;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+}
 .app_dot_list li:last-child {margin-right:0}
 .app_dot_list li a {display:block; width:100%; height:100%}
 .app_dot_list li.active_dot {opacity:1}

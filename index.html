@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
+  <link rel="stylesheet" href="./css/jqueryui.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
@@ -58,6 +59,50 @@
   <!-- 커넥티브검색영역시작 -->
   <div id="search_area">
     <h2 class="hidden">커넥티브검색</h2>
+    <form action="#;" id="search_wrap">
+      <fieldset class="country_wrap">
+        <legend class="search_title">나라</legend>
+        <select class="search_county search_select">
+          <option clsass="selected" selected="selected">어느 나라를 찾으세요?</option>
+          <option>러시아(Russia)</option>
+          <option>미국(The United States)</option>
+          <option>인도(India)</option>
+          <option>캐나다(Canada)</option>
+          <option>홍콩(Hong Kong)</option>
+        </select>
+      </fieldset>
+      <fieldset class="works_wrap">
+        <legend class="search_title">대행업무</legend>
+        <select class="search_works search_select">
+          <option clsass="selected" selected="selected">어떤 업무를 원하세요?</option>
+          <optgroup label="일반 커넥티브">
+            <option>일반 구매대행</option>
+            <option>명품 구매대행</option>
+            <option>현지배송</option>
+            <option>현지 공연 및 콘서트</option>
+            <option>유학 및 워킹홀리데이</option>
+            <option>여행</option>
+          </optgroup>
+          <optgroup label="전문 커넥티브">
+            <option>출장대행</option>
+            <option>법률문제</option>
+            <option>부동산 거래</option>
+            <option>현지사업</option>
+          </optgroup>
+          <optgroup label="기타">
+            <option>기타</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <fieldset class="date_wrap">
+        <legend class="search_title">날짜</legend>
+        <input class="date_picker" type="text" placeholder="신청 날짜는 언제인가요?">
+      </fieldset>
+      <fieldset class="button_wrap">
+        <legend class="hidden">검색버튼</legend>
+        <input class="search_btn" type="button" value="검색하기">
+      </fieldset>
+    </form>
   </div>
   <!-- 비주얼영역시작 -->
   <section id="visual_wrap">
