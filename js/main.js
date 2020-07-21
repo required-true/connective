@@ -7,6 +7,7 @@ $(document).ready(function(){
   reviewParallaxEffect() // 리뷰영역 패러랙스스크롤 효과와 큰리뷰영역 활성화 효과 
   subVisualEffect(); // 서브비주얼 효과
   appAreaslideEffect(); // 앱영역 슬라이드 효과
+  openLangWrap(); // 언어메뉴 클릭시 언어선택영역 열기
 })
 
 function mainVisualEffect(){
@@ -107,15 +108,17 @@ function resultCountEffect(){
     scrollHeight=$(document).scrollTop();
     if(scrollHeight>=startTop && isdone===false){
       count();
+      $('.count_list').animate({'top':0,'opacity':1},500,"easeOutCubic");
       isdone=true;
     }
   }
+
   function count(){ // 카운트함수
     $('.count').each(function () {
       $(this).prop('Counter',100).animate({
         Counter: $(this).text()
       }, {
-        duration: 3000,
+        duration: 1000,
         easing: 'swing',
         step: function (now) {
           $(this).text(comma(Math.ceil(now)));
@@ -193,25 +196,28 @@ function subVisualEffect(){
   // 이벤트
   $('.sub_left_btn').on('click',prevSlide); //왼쪽버튼 클릭 이벤트
   $('.sub_right_btn').on('click',nextSlide); // 오른쪽버튼 클릭 이벤트
+  $visualWrap.on('click',nextSlide); // 비주얼이미지 클릭시 이벤트
 
   // 함수
   function prevSlide(){
-    if(clickIndex>0){
-      clickIndex--
+      clickIndex--;
+      if(clickIndex<0){
+        clickIndex=$visualList.size()-1;
+      }
       $movingWrap.css({'left':-(movingX*clickIndex)})
       $visualList.last().prependTo($visualWrap); // 마지막리스트를 첫번째위치로 이동
       $visualList=$visualWrap.children('li');
       $('.paging').text(clickIndex+1)
-    }
   }
   function nextSlide(){
-    if(clickIndex<listNum-1){
       clickIndex++
+      if(clickIndex>=$visualList.size()){
+        clickIndex=0;
+      }
       $movingWrap.css({'left':-(movingX*clickIndex)})
       $visualList.first().appendTo($visualWrap); // 첫번째리스트를 마지막위치로 이동
       $visualList=$visualWrap.children('li');
       $('.paging').text(clickIndex+1)
-    }
   }
 }
 function appAreaslideEffect(){
@@ -225,7 +231,8 @@ function appAreaslideEffect(){
 
   //이벤트
   $dotList.on('click',clickDot); // 도트 클릭시 이벤트
-
+  $('.app_dot_list').on('mouseenter',stopPlay);
+  $('.app_dot_list').on('mouseleave',function(){timer=setInterval(autoPlay,3000)})
   //함수
   function autoPlay(){ //오토플레이 함수
     dotIndex++
@@ -236,10 +243,29 @@ function appAreaslideEffect(){
       $dotList.removeClass('active_dot')
       $dotList.eq(dotIndex).addClass('active_dot')
   }
+  function stopPlay(){
+    clearInterval(timer);
+  }
   function clickDot(){ // 도트 클릭시 슬라이드 함수
     dotIndex=$dotList.index($(this));
     $movingWrap.stop().animate({'left':-movingX*dotIndex},500,"easeOutCubic")
     $dotList.removeClass('active_dot')
     $dotList.eq(dotIndex).addClass('active_dot')
+  }
+}
+function openLangWrap(){
+  var langBtn=$('.global_lang').children('a');
+  var langCloseBtn=$('.lang_close_btn')
+  // 이벤트
+  langBtn.on('click',openLangWrap);
+  langCloseBtn.on('click',closeLangWrap);
+  // 함수
+  function openLangWrap(){
+    $('body').css({'overflow':'hidden'})
+    $('.lang_wrap').css({'display':'block'});
+  }
+  function closeLangWrap(){
+    $('.lang_wrap').css({'display':'none'});
+    $('body').css({'overflow':'scroll'})
   }
 }

@@ -80,6 +80,7 @@ img {width:100%}
 
 .global_lang {float:right; width:110px; height:24px; margin:34px 100px 0 0;}
 .global_lang a {display:block; width:100%; height:100%; font:normal 16px/24px "S_M"}
+.global_lang a:hover {color:#FF7A80}
 .global_lang img {width:24px; height:24px;
 	-webkit-transform:translateY(5px);
 	-ms-transform:translateY(5px);
@@ -118,7 +119,7 @@ img {width:100%}
 }
 .progress-wrap {
 	position: fixed;
-	right: 15%;
+	right: 12%;
 	bottom: 50px;
 	height: 46px;
 	width: 46px;

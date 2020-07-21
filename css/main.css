@@ -1,34 +1,35 @@
 /* 커넥티브 검색영역 */
-#search_area {position:absolute; left:50%; margin-left:-410px; top:118px; z-index:10; width:820px; height:80px; border:2px solid #FD5C63; background:#fff;
+#search_area {position:absolute; left:50%; margin-left:-410px; top:118px; z-index:10; width:820px; height:70px; border:2px solid #FD5C63; background:#fff;
    -webkit-border-radius:40px; -webkit-box-sizing:border-box;
    -moz-border-radius:40px; -moz-box-sizing:border-box;
    border-radius:40px; box-sizing:border-box
-  }
-  #search_wrap {width:742px; height:40px; margin:20px auto 0 auto}
-  .search_title {font:normal 12px "S_M"}
-  .country_wrap {float:left; position:relative; left:0; top:0; width:150px; height:100%; padding-right:20px}
-  .country_wrap::after {content:""; position:absolute; right:0; top:0px; width:1px; height:40px; background:#ccc}
-  .works_wrap {float:left; position:relative; left:0; top:0; width:158px; height:100%; padding:0 15px}
-  .works_wrap::after {content:""; position:absolute; right:0; top:0px; width:1px; height:40px; background:#ccc}
-  .search_select {font:normal 14px "S_M"; color:#ccc}
-  .search_select optgroup {font:normal 14px "S_B"; color:#000}
-  .search_select option {font:normal 14px "S_M"; color:#000}
-  .date_wrap {float:left; width:180px; height:100%; padding:0 20px}
-  .date_picker {font:normal 14px "S_M"; color:#000}
-  .date_picker::placeholder {color:#ccc}
-  .button_wrap {float:left; width:122px; height:100%}
-  .search_btn {float:right; width:120px; height:40px; font:normal 14px "S_M"; color:#fff; background:#5A62FF; cursor:pointer;
-    -webkit-border-radius:20px;
-    -moz-border-radius:20px;
-    border-radius:20px;
-  }
-  .search_btn:hover {background:#454BC2}
+}
+#search_wrap {width:742px; height:40px; margin:15px auto 0 auto}
+.search_title {font:normal 12px "S_M"}
+.country_wrap {float:left; position:relative; left:0; top:0; width:150px; height:100%; padding-right:20px}
+.country_wrap::after {content:""; position:absolute; right:0; top:0px; width:1px; height:40px; background:#ccc}
+.works_wrap {float:left; position:relative; left:0; top:0; width:158px; height:100%; padding:0 15px}
+.works_wrap::after {content:""; position:absolute; right:0; top:0px; width:1px; height:40px; background:#ccc}
+.search_select {font:normal 14px "S_M"; color:#ccc}
+.search_select optgroup {font:normal 14px "S_B"; color:#000}
+.search_select option {font:normal 14px "S_M"; color:#000}
+.date_wrap {float:left; width:180px; height:100%; padding:0 20px}
+.date_picker {width:154px; font:normal 14px "S_M"; color:#000}
+.date_picker::placeholder {color:#ccc}
+.button_wrap {float:left; width:122px; height:100%}
+.search_btn {float:right; width:120px; height:40px; font:normal 14px "S_M"; color:#fff; background:#5A62FF; cursor:pointer;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border-radius:20px;
+}
+.search_btn:hover {background:#454BC2}
 /* 비주얼 영역 */
 #visual_wrap {overflow:hidden; float:left; position:relative; left:0; top:0; width:100%; height:500px}
 .visual_list {position:relative; left:0; top:0; width:300%; height:100%}
 .visual_list li {float:left; position:relative; left:0; top:0; width:33.33%; height:100%}
+.visual_list li:nth-child(3) .visualtext {height:150px; top:150px}
 .visualtext {position:absolute; left:18.75%; top:200px; width:600px; height:100px; font:normal 36px/46px "S_M"; color:white; letter-spacing:-1px}
-.bangtan_btn {position:absolute; left:18.75%; top:370px; width:100px; height:30px; background:#5AEBFF;
+.bangtan_btn {position:absolute; left:18.75%; top:350px; width:100px; height:30px; background:#5AEBFF;
   -webkit-border-radius:20px;
   -moz-border-radius:20px;
   border-radius:20px;
@@ -60,7 +61,7 @@
 .fixed_box {float:left; position:relative; left:0; top:0; z-index:10; width:1200px; height:100%; background:#fff}
 .normal_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%}
 .normal_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
-.normal_text {position: absolute; left:17px; top:62px; font:normal 14px "S_R"}
+.normal_text {position: absolute; left:17px; top:66px; font:normal 14px "S_R"}
 .normal_connect_list {position:absolute; left:120px; top:100px; width:540px; height:280px}
 .normal_connect_list li {float:left; width:120px; height:120px; margin:0 90px 40px 0; background:#111;
   -webkit-border-radius:60px; -webkit-transition:0.3s ease;
@@ -68,7 +69,7 @@
   border-radius:60px; -o-transition:0.3s ease;
   transition:0.3s ease
   }
-.normal_connect_list li:hover {background:#222}
+.normal_connect_list li:hover {background:#2c2c2c}
 .normal_connect_list li:nth-child(3n) {margin-right:0}
 .normal_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white;
   -webkit-transform:translateY(-50%);
@@ -97,7 +98,7 @@
 
 .pro_connect_wrap {float:left; position:relative; left:0; top:0; width:800px; height:100%; opacity:0}
 .pro_title {position:absolute; left:15px; top:20px; width:100%; height:38px; font:normal 32px "S_B"}
-.pro_text {position:absolute; lefT:17px; top:62px; font:normal 14px "S_R"}
+.pro_text {position:absolute; lefT:17px; top:66px; font:normal 14px "S_R"}
 .pro_connect_list {position:absolute; left:40px; top:160px; width:720px; height:120px}
 .pro_connect_list li {float:left; width:120px; height:120px; margin-right:80px; background:#111;
   -webkit-border-radius:60px; -webkit-transition:0.3s ease;
@@ -106,7 +107,7 @@
   transition:0.3s ease;
 }
 .pro_connect_list li:last-child {margin-right:0}
-.pro_connect_list li:hover {background:#222}
+.pro_connect_list li:hover {background:#2c2c2c}
 .pro_connect_list li a {display:block; width:100%; margin-top:60px; font:normal 16px "S_M"; text-align:center; color:white;
   -webkit-transform:translateY(-50%);
   -ms-transform:translateY(-50%);
@@ -118,13 +119,13 @@
 /* resultcount */
 #count_wrap {float:left; width:100%; height:340px; background:url(../images/countwrap_bg.jpg)no-repeat center/cover}
 .count_inner {width:768px; height:100%; margin:0 auto}
-.count_list {width:100%; height:100%; margin-top:65px}
-.count_list li {float:left; width:160px; height:210px; margin-right:144px}
+.count_list {position:relative; left:0; top:-200px; width:100%; height:100%; margin-top:65px; opacity:0}
+.count_list li {float:left; width:170px; height:210px; margin-right:124px}
 .count_list li:last-child {margin-right:0}
 .count_icon {width:120px; height:120px; margin:0 auto}
-.count_count {width:100%; margin:10px 0 6px 0; font:normal 14px "S_B"; text-align:center; color:#5AEBFF}
-.count_count span {font-size:24px}
-.count_text {width:100%; font:normal 12px "S_R"; text-align:center; color:white}
+.count_count {width:100%; margin:10px 0 6px 0; font:normal 16px "S_B"; text-align:center; color:#5AEBFF}
+.count_count span {font-size:32px}
+.count_text {width:100%; font:normal 14px "S_R"; text-align:center; color:white}
 .count_text span {font-size:14px}
 
 /* bestconnector */
@@ -180,10 +181,10 @@
 /* review */
 #review_wrap {float:left; width:100%; height:1298px; background:#FFF8EE}
 .review_inner {width:1200px; height:100%; margin:0 auto}
-
+.fa-star {margin-right:3px}
 .review_left_wrap {float:left; position:relative; left:0; top:0; width:514px; height:820px}
 .review_left_title {margin-top:40px; font:normal 32px "S_B"}
-.review_left_text {margin:10px 0 40px 0; font:normal 20px "S_R"}
+.review_left_text {margin:6px 0 30px 0; font:normal 20px "S_R"}
 .review_left_box {overflow:hidden; position:relative; left:0; top:0; width:493px; height:632px; border:solid 4px #FD5C63; background:#fff;
   -webkit-border-radius:15px; -webkit-box-sizing:border-box;
   -moz-border-radius:15px; -moz-box-sizing:border-box;
@@ -191,12 +192,12 @@
 }
 .left_box_img {width:100%; height:340px}
 .left_box_info {position:relative; left:0; top:0; width:100%; height:290px}
-.left_grade_area {float:left; width:100%; height:24px; margin-top:20px}
+.left_grade_area {float:left; width:100%; height:24px; margin-top:10px}
 .left_big_title {float:left; width:70px; margin:0 20px 0 20px; font:normal 18px "S_B"}
 .left_big_star {float:left; width:130px; height:24px; font-size:18px; line-height:24px; color:#FFE600}
 .left_work_area {float:left; width:100%; height:24px; margin-top:10px}
 .left_big_work {float:left; font:normal 16px/24px "S_R"}
-.left_big_text {float:left; width:453px; margin:40px 0 0 20px;; font:normal 16px "S_R"}
+.left_big_text {float:left; width:453px; margin:20px 0 0 20px;; font:normal 16px "S_R"}
 .left_big_btn {position:absolute; right:20px; bottom:20px; width:49px; height:50px; background:url(../images/review_big_btn.png)no-repeat}
 .left_big_btn a {display:block; width:100%; height:100%}
 .best_btn {position:absolute; right:10px; top:10px; width:68px; height:34px; font:normal 14px/34px "S_B"; color:white; text-align:center; background:#7178FF;
@@ -226,15 +227,20 @@
 .right_big_work {float:left; font:normal 16px/24px "S_R"}
 .right_big_text {float:left; width:270px; margin:20px 0 0 10px; font:normal 14px "S_R"}
 .right_more_btn {position:absolute; right:10px; bottom:15px; width:30px; height:15px}
-.right_more_btn a {display:block; width:100%; height:100%; font:normal 12px "S_B"; color:#a9a9a9}
+.right_more_btn a {display:block; width:100%; height:100%; font:normal 12px "S_B"; color:#a9a9a9;
+  -webkit-transition:0.2s ease;
+  -moz-transition:0.2s ease;
+  -o-transition:0.2s ease;
+  transition:0.2s ease;
+}
+.right_more_btn a:hover {color:#000}
 
 /* connective subvisual */
 #subvisual_wrap {float:left; width:100%; height:460px; margin:120px 0 120px 0; background:url(../images/sub_visual_bg.png)repeat-x}
 .subvisual_inner {width:1200px; height:100%; margin:0 auto}
 
 .subvisual_left {float:left; width:320px; height:100%}
-.subvisual_title {width:100%; height:45px; margin-top:30px; font:normal 32px "S_B"}
-.sub_text_wrap {overflow:hidden; width:100%; height:170px; margin-top:90px;}
+.sub_text_wrap {overflow:hidden; width:100%; height:170px; margin-top:165px;}
 .sub_test_list {position:relative; left:0px; top:0; width:300%; height:100%}
 .sub_test_list li {float:left; width:320px; height:100%}
 .sub_text_title {font:normal 36px "S_M"; color:white}
@@ -269,14 +275,14 @@
 /* connective support */
 #support_wrap {float:left; width:100%; height:388px; margin-bottom:120px}
 .support_inner {width:1200px; height:100%; margin:0 auto}
-.support_title {font:normal 32px "S_B"}
-.support_wrap {width:505px; height:320px; background:#FFF8EE}
+.support_title {width:1200px; height:40px; margin:0 auto 30px auto; font:normal 32px "S_B"}
+.support_wrap {width:493px; height:312px; background:#FFF8EE}
 .support_title_wrap {width:470px; height:75px; margin:0 auto; border-bottom:solid 2px #000 }
-.support_board_title {float:left; width:90%; height:32px; padding-top:38px; font:normal 28px/32px "S_R"}
+.support_board_title {float:left; width:90%; height:32px; padding-top:38px; font:normal 20px/30px "S_R"}
 .support_more_btn {float:right; width:24px; height:24px; margin-top:42px; background:url(../images/plus_icon.png)no-repeat}
 .support_more_btn a {display:block; width:100%; height:100%}
 .support_list {width:470px; height:273px; margin:5px auto 0 auto}
-.support_list li {margin-top:15px; font:normal 20px "S_R"}
+.support_list li {margin-top:15px; font:normal 18px "S_R"}
 
 /* app */
 #app_wrap {float:left; width:100%; height:498px; margin-bottom:150px}
@@ -300,7 +306,7 @@
 .inner_img_list li:nth-child(3) {background:#777}
 
 
-.app_dot_list {position:absolute; left:292px; bottom:23px; width:40px; height:8px}
+.app_dot_list {position:absolute; left:302px; bottom:20px; width:40px; height:8px}
 .app_dot_list li {float:left; width:8px; height:8px; margin-right:8px; background:#FD5C63; opacity:0.6;
   -webkit-border-radius:8px;
   -moz-border-radius:8px;
@@ -309,6 +315,18 @@
 .app_dot_list li:last-child {margin-right:0}
 .app_dot_list li a {display:block; width:100%; height:100%}
 .app_dot_list li.active_dot {opacity:1}
+
+.lang_wrap {display:none; position:fixed; left:0; top:0; z-index:90; width:100%; height:940px; background:rgba(0,0,0,0.6)}
+.lang_box {width:1200px; height:360px; margin:260px auto 0 auto; background:#fff}
+.lang_close_btn {float:right; width:30px; height:30px; margin:20px 20px 0 0; background:url(../images/close.png)no-repeat}
+.lang_close_btn a {display:block; width:100%; height:100%}
+.lang_text {float:left; margin:70px 0 60px 90px; font:normal 36px "S_R"}
+.lang_list {float:left; width:1084px; height:98px; margin-left:58px}
+.lang_list li {float:left; width:256px; height:100%; margin-right:20px; text-align:center; background:#FF7A80; border-radius:49px}
+.lang_list li:last-child {margin-right:0}
+.lang_list li a {display:inline-block; margin-top:16px; font:normal 24px "S_R"}
+.lang_list li a span {color:#fff}
+
 
 /* 반응형 미디어 쿼리 */
 @media screen and (max-width:1200px){
