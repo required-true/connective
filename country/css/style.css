@@ -1,0 +1,35 @@
+#contents_wrap {float:left; width:100%; height:1020px}
+.contents_inner {width:1200px; height:100%; margin:0px auto; position: relative; left:0px; top:-170px;}
+.contents_title{position:absolute; left:0px; top:200px; width:100%; height:38px; text-align:center; font:normal 36px "S_B"}
+/* search area */
+#search_area {position:absolute; left:50%; margin-left:-400px; top:286px; z-index:10; width:800px; height:50px; padding:10px; border:2px solid #FD5C63; background:#fff;
+  -webkit-border-radius:40px; -webkit-box-sizing:border-box;
+  -moz-border-radius:40px; -moz-box-sizing:border-box;
+  border-radius:25px; box-sizing:border-box
+}
+#search_wrap {width:100%; height:50px;}
+.country_wrap {float:left; width:710px; height:100%; margin-left:20px;}
+.country {width:100%; font:normal 14px "S_M";}
+.country::placeholder {color:#ccc; font-size:16px;}
+.button_wrap {float:left; width:34px; height:100%}
+.search_btn {float:left; width:24px; font-size:24px; cursor:pointer; background:url("../../images/search.png")no-repeat; border:none;}
+.supportable {font:normal 12px "S_R"; text-indent:20px;}
+/* worldmap */
+#worldmap {position:absolute; left:0px; top:465px; width:800px; height:400px; background:url("../../images/worldmap.png")no-repeat;}
+.location_list li i{font-size:19px; color:#FF4D4D; opacity:0.5;}
+.location_list li:nth-child(1){position:absolute; left:645px; top:50px;}
+.location_list li:nth-child(2){position:absolute; left:130px; top:140px;}
+.location_list li:nth-child(3){position:absolute; left:540px; top:195px;}
+.location_list li:nth-child(4){position:absolute; left:120px; top:60px;}
+.location_list li:nth-child(5){position:absolute; left:620px; top:180px;}
+.location_list span {display:none; font:normal 14px "S_R"; text-align: center;}
+/* country info */
+#country_info{
+  position:absolute; right:0px; top:465px; width:294px; height:435px; padding:20px 10px; background:#FFF8EE;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+.country_list {display:none;}
+.country_name {margin-bottom:20px; font:normal 24px "S_B";}
+.city_list li {font:normal 18px/32px "S_R";}
