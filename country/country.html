@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
+  <link rel="stylesheet" href="../css/common.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <script src="../js/common.js"></script>
+  <link rel="stylesheet" href="./css/style.css"></link>
+  <title>커넥티브</title>
+  <script>
+    $(document).ready(function(){
+      mapEffect() //나라 검색하기
+    })
+
+    function mapEffect(){
+      var $value
+      var $supportable=$("<p class='supportable'>*지원하는 나라입니다.</p>")
+      var $insupportable=$("<p class='supportable'>*지원하지 않는 나라입니다.</p>")
+      var $marker=$(".location_list").children()
+
+      //초기값
+      activeCityInfo(-1)
+
+      //이벤트
+      $(".button_wrap").on("click",searchCountry) //나라 검색
+      $(".country").on("keypress",function(e){   // enter 나라 검색
+        if(e.which==13){    
+          searchCountry()
+        }        
+      })
+
+      $marker.on("click",cityNum) //지도,도시정보 활성화
+
+
+      function searchCountry(){
+        $value=$(".country").val()
+
+        switch($value){
+
+          case "러시아" : 
+            $(".supportable").remove()
+            $supportable.appendTo($("#search_area"))
+            activeCityInfo(0)
+            activeMarker(0)
+            break;
+
+          case "미국" :
+           $(".supportable").remove()        
+            $supportable.appendTo($("#search_area"))
+            activeCityInfo(1)           
+            activeMarker(1)     
+            break;
+
+          case "인도" :
+           $(".supportable").remove()
+            $supportable.appendTo($("#search_area"))
+            activeCityInfo(2)
+            activeMarker(2)
+            break;
+
+          case "캐나다" :
+           $(".supportable").remove()
+            $supportable.appendTo($("#search_area"))
+            activeCityInfo(3)
+            activeMarker(3)
+            break;
+
+          case "홍콩" :
+            $(".supportable").remove()
+            $supportable.appendTo($("#search_area"))
+            activeCityInfo(4)
+            activeMarker(4)
+            break;
+
+          default :
+            $(".supportable").remove()
+            $insupportable.appendTo($("#search_area"))
+            activeCityInfo(-1)
+            $marker.children().css({"opacity":0.5})
+            $marker.children("span").css({"display":"none"})
+        }
+      }
+
+
+      function cityNum(){
+        $(".country").val("") //search 비우기
+
+        num=$marker.index($(this))
+
+        activeMarker(num)
+        activeCityInfo(num)
+      }
+    
+      function activeMarker(num){
+        //marker 활성화
+        $marker.children().css({"opacity":0.5})
+        $marker.eq(num).children().css({"opacity":1})
+
+        //marker 아래 도시이름 활성화
+        $marker.children("span").css({"display":"none"})
+        $marker.eq(num).children("span").css({"display":"block"})
+      }
+
+      function activeCityInfo(num){ //도시정보 리스트 활성화
+        $(".country_list").css({"display":"none"})
+        $(".country_list").eq(num+1).css({"display":"block"})
+      }
+
+    }
+
+
+  </script>
+</head>
+<body>
+  <!-- 스킵메뉴시작 -->
+  <ul id="skip_menu">
+    <li><a href="#header_wrap">메뉴바로가기</a></li>
+    <li><a href="#contents_wrap">본문바로가기</a></li>
+    <li><a href="#footer_wrap">하단바로가기</a></li>
+  </ul>
+  <!-- 헤더영역시작 -->
+  <header id="header_wrap">
+    <div class="header_inner">
+      <h1 class="logo">
+        <a href="../index.html" title="메인페이지 바로가기"><img src="../images/logo.png" alt="커넥티브로고"></a><span class="hidden">커넥티브</span>
+      </h1>
+      <nav class="topmenu">
+        <h2 class="hidden">로그인메뉴</h2>
+        <ul class="topmenu_list">
+          <li><a href="#;">로그인</a></li>
+          <li><a href="#;">회원가입</a></li>
+        </ul>
+      </nav>
+      <nav class="mainmenu">
+        <h2 class="hidden">메인메뉴</h2>
+        <ul class="mainmenu_list">
+          <li>
+            <a href="./country.html" title="지원하는 나라 바로가기">지원하는 나라</a>
+          </li>
+          <li>
+            <a href="#;">커넥티브 신청</a>
+          </li>
+          <li>
+            <a href="#;">커넥티브 지원</a>
+            <ul class="submenu_list">
+              <li><a href="#;">사용자 지원</a></li>
+              <li><a href="#;">커넥터 지원</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="apply_btn"><a href="#;">커넥터 가입하기</a></div>
+    </div>
+  </header>
+  <!-- 컨텐츠영역시작 -->
+  <div id="contents_wrap">
+    <div class="contents_inner">
+      <h2 class="hidden">지원하는나라 검색</h2>
+      <p class="contents_title">지원하는 나라를 확인해 보세요!</p>
+      <div id="search_area">
+        <form action="#;" id="search_wrap">
+          <fieldset class="country_wrap">
+            <legend class="hidden">나라검색</legend>
+            <input class="country" type="text" placeholder="찾고자하는 나라를 검색하세요">
+          </fieldset>
+          <fieldset class="button_wrap">
+            <legend class="hidden">검색버튼</legend>
+            <input type="button" class="search_btn">
+          </fieldset>
+        </form>
+      </div>
+      <div id="worldmap">
+        <ul class="location_list">
+          <li><i class="fas fa-map-marker-alt"></i><br><span>러시아(Russia)</span></li>
+          <li><i class="fas fa-map-marker-alt"></i><br><span>미국(The United States)</span></li>
+          <li><i class="fas fa-map-marker-alt"></i><br><span>인도(India)</span></li>
+          <li><i class="fas fa-map-marker-alt"></i><br><span>캐나다(Canada)</span></li>
+          <li><i class="fas fa-map-marker-alt"></i><br><span>홍콩(Hong Kong)</span></li>
+        </ul>
+      </div>
+      <div id="country_info">
+        <div class="country_list">
+          <p class="country_name">지원하는 나라</p>
+          <ul class="city_list">
+            <li>러시아(Russia)</li>
+            <li>미국(The United States)</li>
+            <li>인도(India)</li>
+            <li>캐나다(Canada)</li>
+            <li>홍콩(Hong Kong)</li>
+          </ul>
+        </div>
+        <div class="country_list">
+          <p class="country_name">러시아(Russia)</p>
+          <ul class="city_list">
+            <li>노보시비르스크</li>
+            <li>모스크바</li>
+            <li>볼고그라드</li>
+            <li>블라디보스토크</li>
+            <li>사할린</li>
+            <li>상트페테르부르크</li>
+            <li>소치</li>
+            <li>야쿠츠크</li>
+            <li>이르쿠츠크</li>
+            <li>카잔</li>
+          </ul>
+        </div>
+        <div class="country_list">
+          <p class="country_name">미국(The United States)</p>
+          <ul class="city_list">
+            <li>뉴올리언스</li>
+            <li>뉴욕</li>
+            <li>덴버</li>
+            <li>디트로이트</li>
+            <li>라스베이거스</li>
+            <li>로스앤젤레스</li>
+            <li>리노</li>
+            <li>마이애미</li>
+            <li>밀워키</li>
+          </ul>
+        </div>
+        <div class="country_list">
+          <p class="country_name">인도(India)</p>
+          <ul class="city_list">
+            <li>델리</li>
+            <li>바라나시</li>
+            <li>아그라</li>
+          </ul>
+        </div>
+        <div class="country_list">
+          <p class="country_name">캐나다(Canada)</p>
+          <ul class="city_list">
+            <li>캘거리</li>
+            <li>에드먼트</li>
+            <li>핼리팩스</li>
+            <li>몬트리올</li>
+            <li>오타와</li>
+            <li>퀘벡</li>
+            <li>토론토</li>
+            <li>벤쿠버</li>
+          </ul>
+        </div>
+        <div class="country_list">
+          <p class="country_name">홍콩(Hong Kong)</p>
+          <ul class="city_list">
+            <li>홍콩섬</li>
+            <li>주룽시</li>
+            <li>주룽둥</li>
+            <li>신제둥</li>
+            <li>신제시</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 푸터영역시작 -->
+  <footer id="footer_wrap">
+    <div class="foouter_inner">
+      <div class="foonter_top">
+        <nav class="footer_menu">
+          <h2 class="hidden">푸터메뉴</h2>
+          <ul class="footer_menu_list">
+            <li>
+              <a href="#;">커넥티브란?</a>
+              <ul class="footer_submenu_list">
+                <li><a href="#;">이용방법</a></li>
+                <li><a href="#;">신뢰와 안정성</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#;">지원하는 나라</a>
+            </li>
+            <li>
+              <a href="#;">커넥티브 신청하기</a>
+            </li>
+            <li>
+              <a href="#;">커넥티브 이야기</a>
+              <ul class="footer_submenu_list">
+                <li><a href="#;">함께하는 커넥티브</a></li>
+                <li><a href="#;">소통하는 커넥티브</a></li>
+                <li><a href="#;">성장하는 커넥티브</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#;">커넥티브 지원</a>
+              <ul class="footer_submenu_list">
+                <li><a href="#;">사용자 지원</a></li>
+                <li><a href="#;">커넥터 지원</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="global_lang"><a href="#;"><img src="../images/globe_icon.png" alt="지구본아이콘"> 한국어(KR)</a></div>
+      </div>
+      <div class="footer_bottom">
+        <div class="copyright_wrap">
+          <p class="copyright_connective">2020 connective, Inc. All rights reserved</p>
+          <div class="footer_infomenu"><a href="#;">개인정보 처리방침</a></div>
+          <div class="footer_infomenu"><a href="#;">이용약관</a></div>
+        </div>
+        <div class="sns_wrap">
+          <ul class="sns_list">
+            <li>
+              <a href="#;"><img src="../images/icon_kakaotalk.png" alt=""></a>
+            </li>
+            <li>
+              <a href="#;"><img src="../images/icon_instagram.png" alt=""></a>
+            </li>
+            <li>
+              <a href="#;"><img src="../images/icon_twitter.png" alt=""></a>
+            </li>
+            <li>
+              <a href="#;"><img src="../images/icon_facebook.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lang_wrap">
+      <div class="lang_box">
+        <div class="lang_close_btn"><a href="#;"></a></div>
+        <p class="lang_text">변경하려는 언어와 지역을 선택해주세요.</p>
+        <ul class="lang_list">
+          <li><a href="#;">한국어<br><span>대한민국</span></a></li>
+          <li><a href="#;">English<br><span>United States</span></a></li>
+          <li><a href="#;">日本語<br><span>日本</span></a></li>
+          <li><a href="#;">体中文<br><span>中国</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
