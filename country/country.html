@@ -43,38 +43,23 @@
         switch($value){
 
           case "러시아" : 
-            $(".supportable").remove()
-            $supportable.appendTo($("#search_area"))
-            activeCityInfo(0)
-            activeMarker(0)
+            result(0)
             break;
 
           case "미국" :
-           $(".supportable").remove()        
-            $supportable.appendTo($("#search_area"))
-            activeCityInfo(1)           
-            activeMarker(1)     
+           result(1) 
             break;
 
           case "인도" :
-           $(".supportable").remove()
-            $supportable.appendTo($("#search_area"))
-            activeCityInfo(2)
-            activeMarker(2)
+           result(2) 
             break;
 
           case "캐나다" :
-           $(".supportable").remove()
-            $supportable.appendTo($("#search_area"))
-            activeCityInfo(3)
-            activeMarker(3)
+             result(3)
             break;
 
           case "홍콩" :
-            $(".supportable").remove()
-            $supportable.appendTo($("#search_area"))
-            activeCityInfo(4)
-            activeMarker(4)
+            result(4)
             break;
 
           default :
@@ -83,6 +68,13 @@
             activeCityInfo(-1)
             $marker.children().css({"opacity":0.5})
             $marker.children("span").css({"display":"none"})
+        }
+
+        function result(num){
+          $(".supportable").remove()
+            $supportable.appendTo($("#search_area"))
+            activeCityInfo(num)
+            activeMarker(num)
         }
       }
 
@@ -143,7 +135,7 @@
             <a href="./country.html" title="지원하는 나라 바로가기">지원하는 나라</a>
           </li>
           <li>
-            <a href="#;">커넥티브 신청</a>
+            <a href="../apply/apply.html" title="커넥티브 신청 바로가기">커넥티브 신청</a>
           </li>
           <li>
             <a href="#;">커넥티브 지원</a>
@@ -166,7 +158,7 @@
         <form action="#;" id="search_wrap">
           <fieldset class="country_wrap">
             <legend class="hidden">나라검색</legend>
-            <input class="country" type="text" placeholder="찾고자하는 나라를 검색하세요">
+            <input class="country" type="text" placeholder="찾고자하는 나라를 검색하세요" autofocus>
           </fieldset>
           <fieldset class="button_wrap">
             <legend class="hidden">검색버튼</legend>

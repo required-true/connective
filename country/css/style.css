@@ -12,10 +12,10 @@
 .country {width:100%; font:normal 14px "S_M";}
 .country::placeholder {color:#ccc; font-size:16px;}
 .button_wrap {float:left; width:34px; height:100%}
-.search_btn {float:left; width:24px; font-size:24px; cursor:pointer; background:url("../../images/search.png")no-repeat; border:none;}
+.search_btn {float:left; width:24px; font-size:24px; cursor:pointer; background:url(../../images/search.png)no-repeat; border:none;}
 .supportable {font:normal 12px "S_R"; text-indent:20px;}
 /* worldmap */
-#worldmap {position:absolute; left:0px; top:465px; width:800px; height:400px; background:url("../../images/worldmap.png")no-repeat;}
+#worldmap {position:absolute; left:0px; top:465px; width:800px; height:400px; background:url(../../images/worldmap.png)no-repeat;}
 .location_list li i{font-size:19px; color:#FF4D4D; opacity:0.5;}
 .location_list li:nth-child(1){position:absolute; left:645px; top:50px;}
 .location_list li:nth-child(2){position:absolute; left:130px; top:140px;}
