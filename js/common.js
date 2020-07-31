@@ -11,6 +11,8 @@ function headerEffect(){
   var menuWidth=$mainMenu.innerWidth();
   var navLeft=$(".mainmenu").offset().left;
   var menuIndex;
+  
+  showCurrentPage() //서브페이지에서 현재 페이지 알려주는 함수
 
   // 이벤트
   $mainMenu.on('mouseenter focus',overMenu); //메인메뉴 오버시, 접근성 포커스 이벤트
@@ -26,6 +28,7 @@ function headerEffect(){
     $menuBar.css({'left':0}).remove();
     $subMenu.css({'left':200}).hide();
     $('.submenu_bg').remove();
+    showCurrentPage()
   }
   function showSubMenu(menuIndex){ //서브메뉴 활성화 실행함수
     $subMenuBg.appendTo('#header_wrap');
@@ -38,6 +41,16 @@ function headerEffect(){
       $subMenu.show().stop().animate({'left':0,'opacity':1},300,'easeOutCubic')
     }
   }
+
+  function showCurrentPage(){
+    if(window.location=='https://jaehyeokk.github.io/connective/country/country.html'){
+      showSubMenu(0)
+    }
+    if(window.location=='https://jaehyeokk.github.io/connective/apply/apply.html'){
+      showSubMenu(1)
+    }
+  }
+
 }
 
 

@@ -29,6 +29,7 @@
       //이벤트
       $(".button_wrap").on("click",searchCountry) //나라 검색
       $(".country").on("keypress",function(e){   // enter 나라 검색
+        searchCountry()
         if(e.which==13){    
           searchCountry()
         }        
@@ -47,15 +48,15 @@
             break;
 
           case "미국" :
-           result(1) 
+            result(1) 
             break;
 
           case "인도" :
-           result(2) 
+            result(2) 
             break;
 
           case "캐나다" :
-             result(3)
+            result(3)
             break;
 
           case "홍콩" :
@@ -155,7 +156,7 @@
       <h2 class="hidden">지원하는나라 검색</h2>
       <p class="contents_title">지원하는 나라를 확인해 보세요!</p>
       <div id="search_area">
-        <form action="#;" id="search_wrap">
+        <form id="search_wrap" action="#;" onsubmit="return false">
           <fieldset class="country_wrap">
             <legend class="hidden">나라검색</legend>
             <input class="country" type="text" placeholder="찾고자하는 나라를 검색하세요" autofocus>

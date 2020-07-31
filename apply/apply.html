@@ -7,13 +7,74 @@
   <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/jqueryui.css">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
   <script src="../js/common.js"></script>
   <link rel="stylesheet" href="./css/style.css"></link>
   <title>커넥티브</title>
   <script>
-    
+    $(document).ready(function(){
+      showLogin()// 로그인창 로드
+      searchDatePicker() // 서치영역 달력효과
+      detailInfo() //물음표 아이콘 더보기
+      showApplyGuide() //신청가이드, 신청완료 모달
+    })
+
+    function showLogin(){
+      var $Wrap=$("<div id='modal_bg'></div>")
+      $Wrap.appendTo("body")
+
+      $(".submit").on("click",function(){
+        $("#login_wrap").hide()
+        $("#modal_bg").hide()
+      })
+
+    }
+
+    function searchDatePicker(){
+      $('.date_picker').datepicker({
+        showOn:'focus',   // 포커스(텍스트필드) 또는 아이콘
+        dateFormat:'yy.mm.dd',
+        prevText:'이전 달',
+        nextText:'다음 달',
+        monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        monthNamesShort:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        dayNames:['일','월','화','수','목','금','토'],
+        dayNamesShort:['일','월','화','수','목','금','토'],
+        dayNamesMin:['일','월','화','수','목','금','토'],
+        showMonthAfterYear:true,
+        yearSuffix:'년'
+      })
+    }
+
+    function detailInfo(){
+      $(".question").on("mouseenter",function(){
+        $(this).parent().parent().children('.detail_info').css({"display":"block"})
+      })
+      $(".question").on("mouseleave",function(){
+        $('.detail_info').css({"display":"none"})
+      })
+
+    }
+
+    function showApplyGuide(){
+      $(".apply_guide").on('click',function(){
+        $("#modal_bg").show()
+        $("#apply_guide_modal").show()
+      })
+      $("#apply_submit").on('click',function(){
+        $("#modal_bg").show()
+        $("#apply_submit_modal").show()
+      })
+
+      $(".exit_modal").on('click',hideModal)
+
+      function hideModal(){
+        $(this).parent().hide()
+        $("#modal_bg").hide()
+      }
+    }
   </script>
 </head>
 <body>
@@ -58,9 +119,82 @@
     </div>
   </header>
   <!-- 컨텐츠영역시작 -->
-  <div id="contents_wrap">
-
-  </div>
+  <section id="contents_wrap">
+    <div class="contents_inner">
+      <h2 class="hidden">커넥티브신청</h2>
+      <p class="apply_title">커넥티브 신청</p>
+      <button type="button" class="apply_guide">신청 가이드</button>
+      <form action="#;" id="apply_form">
+        <fieldset class="country_wrap">
+          <legend class="search_title">나라</legend>
+          <p class="choose_text">신청하려는 커넥티브의 나라를 선택하세요.</p>
+          <select class="search_select">
+            <option clsass="selected" selected="selected">나라</option>
+            <option>러시아(Russia)</option>
+            <option>미국(The United States)</option>
+            <option>인도(India)</option>
+            <option>캐나다(Canada)</option>
+            <option>홍콩(Hong Kong)</option>
+          </select>
+          <select class="search_city search_select">
+            <option clsass="selected" selected="selected">도시</option>
+            <option>캘거리</option>
+            <option>에드먼턴</option>
+            <option>핼리팩스</option>
+            <option>몬트리올</option>
+            <option>오타와</option>
+            <option>퀘벡</option>
+            <option>토론토</option>
+            <option>밴쿠버</option>
+          </select>
+        </fieldset>
+        <fieldset class="works_wrap">
+          <legend class="search_title">대행업무</legend>
+          <p class="choose_text">원하는 대행업무를 선택하세요. 선택항목에 없을시 기타에 체크해주세요.</p>
+          <select class="search_works search_select">
+            <option clsass="selected" selected="selected"></option>
+            <optgroup label="일반 커넥티브">
+              <option>일반 구매대행</option>
+              <option>명품 구매대행</option>
+              <option>현지배송</option>
+              <option>현지 공연 및 콘서트</option>
+              <option>유학 및 워킹홀리데이</option>
+              <option>여행</option>
+            </optgroup>
+            <optgroup label="전문 커넥티브">
+              <option>출장대행</option>
+              <option>법률문제</option>
+              <option>부동산 거래</option>
+              <option>현지사업</option>
+            </optgroup>
+            <optgroup label="기타">
+              <option>기타</option>
+            </optgroup>
+          </select>
+        </fieldset>
+        <fieldset class="date_wrap">
+          <legend class="search_title">업무 완료 날짜 <i class="fas fa-question-circle question"></i></legend>
+          <p class="choose_text">업무수행 기간을 설정해주세요.</p>
+          <input class="date_picker search_select" type="text">
+          <p class="detail_info">업무 완료 날짜는 언제든지<br>커넥터와 조절하여 변경 할<br>수 있습니다.</p>
+        </fieldset>
+        <fieldset class="write_wrap">
+          <legend class="search_title">상세사항(직접입력란) <i class="fas fa-question-circle question"></i></legend>
+          <textarea class="user_write"></textarea>
+          <p class="detail_info">상세사항은 언제든지 커넥터와<br>조절하여 변경 할 수 있습니다.</p>
+        </fieldset>
+      </form>
+      <section id="apply_info">
+        <h2 class="hidden">커넥티브 신청내용</h2>
+        <div class="info_country">나라</div>
+        <div class="info_city">도시</div>
+        <div class="info_works">대행업무</div>
+        <div class="info_date">업무 완료 날짜</div>
+        <div class="info_write">상세사항(직접입력란)</div>
+      </section>
+      <button type="button" id="apply_submit">신청완료</button>
+   </div>
+  </section>
   <!-- 푸터영역시작 -->
   <footer id="footer_wrap">
     <div class="foouter_inner">
@@ -137,5 +271,45 @@
       </div>
     </div>
   </footer>
+  <div id="apply_guide_modal">
+    <p class="apply_modal_title">준비중입니다.</p>
+    <div class="exit_modal"></div>
+  </div>
+  <div id="apply_submit_modal">
+    <p class="submit_modal_title">신청 완료되었습니다.</p>
+    <p class="submit_modal_text">신청내용 및 커넥터 선택은 오른쪽 상단 프로필 - 커넥티브 신청함에서 확인 할 수 있습니다.<br>커넥터가 커넥티브 연결 요청시 문자 메시지로 해당내용을 알려드립니다.</p>
+    <div class="submit_modal_img"></div>
+    <div class="submit_modal_box">반갑습니다! 000고객님<br>7월13일에 신청한 &#60;현지 공연 및 콘서트 대행업무&#62;
+      에 관해 커넥터가 커넥티브 연결을 요청했습니다.<br>해당 내용은 커넥티브 신청함-커넥터 선택 을 통해 
+      확인 하실 수 있습니다.<br>www.connective.dothome.co.kr/mypage</div>
+    <form action="#;" id="submit_form">
+      <fieldset>
+        <legend class="hidden">추가사항</legend>
+        <p>
+          <button type="button">커넥티브 신청함</button>
+          <button type="button">추가로 신청하기</button>
+        </p>
+      </fieldset>
+    </form>
+    <div class="exit_modal"></div>
+  </div>
+  <div id="login_wrap">
+    <p class="login_info">커넥티브 신청을 이용하시려면 로그인이 필요합니다.</p>
+    <p class="login_title">로그인</p>
+    <form action="#;" id="form_wrap">
+      <fieldset>
+        <legend class="hidden">로그인</legend>
+        <input class="userid" type="text" placeholder="아이디" autofocus autocomplete="none"/>
+        <input type="password" class="password" placeholder="비밀번호"/>
+        <label class="autologin"><input type="checkbox"/>로그인상태 유지하기</label>
+        <button type="button" class="submit">로그인</button>
+        <p>
+          <button type="button" class="naver">네이버 로그인</button>
+          <button type="button" class="kakao">카카오 로그인</button>
+        </p>
+      </fieldset>
+    </form>
+    <p class="login_option"><span>아이디 찾기</span><span>회원가입</span></p>
+  </div>
 </body>
 </html>
