@@ -266,7 +266,7 @@ function openLangWrap(){
   }
   function closeLangWrap(){
     $('.lang_wrap').css({'display':'none'});
-    $('body').css({'overflow':'scroll'})
+    $('body').css({'overflow':'inherit'})
   }
 }
 function topBtnEffect(){

@@ -32,8 +32,8 @@ function headerEffect(){
   }
   function showSubMenu(menuIndex){ //서브메뉴 활성화 실행함수
     $subMenuBg.appendTo('#header_wrap');
-    $menuBar.appendTo('#header_wrap');
-    $menuBar.stop().animate({"left":navLeft+(menuWidth*menuIndex)+(20*menuIndex)},300,"easeOutCubic")
+    $menuBar.appendTo('.mainmenu');
+    $menuBar.stop().animate({"left":(menuWidth*menuIndex)+(20*menuIndex)},300,"easeOutCubic")
     $('.submenu_bg').hide();
     $subMenu.hide();
     if(menuIndex===2){
