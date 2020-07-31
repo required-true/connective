@@ -11,7 +11,7 @@ function headerEffect(){
   var menuWidth=$mainMenu.innerWidth();
   var navLeft=$(".mainmenu").offset().left;
   var menuIndex;
-
+  
   // 이벤트
   $mainMenu.on('mouseenter focus',overMenu); //메인메뉴 오버시, 접근성 포커스 이벤트
   $('#header_wrap').on('mouseleave',outMenu); // 메인메뉴 아웃시 이벤트
@@ -29,8 +29,8 @@ function headerEffect(){
   }
   function showSubMenu(menuIndex){ //서브메뉴 활성화 실행함수
     $subMenuBg.appendTo('#header_wrap');
-    $menuBar.appendTo('#header_wrap');
-    $menuBar.stop().animate({"left":navLeft+(menuWidth*menuIndex)+(20*menuIndex)},300,"easeOutCubic")
+    $menuBar.appendTo('.mainmenu');
+    $menuBar.stop().animate({"left":(menuWidth*menuIndex)+(20*menuIndex)},300,"easeOutCubic")
     $('.submenu_bg').hide();
     $subMenu.hide();
     if(menuIndex===2){

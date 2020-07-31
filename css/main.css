@@ -15,8 +15,8 @@
 .search_select {font:normal 14px "S_R"; color:#000}
 .search_select optgroup {font:normal 14px "S_B"; color:#000}
 .search_select option {display:block; height:24px; font:normal 14px "S_R"; color:#000}
-.date_wrap {float:left; width:160px; height:100%}
-.date_picker {width:154px; font:normal 14px "S_R"; color:#000}
+.date_wrap {float:left; width:151px; height:100%}
+.date_picker {width:100%; font:normal 14px "S_R"; color:#000}
 .date_picker::placeholder {color:#000}
 .button_wrap {float:right; width:120px; height:100%}
 .search_btn {float:right; width:100%; height:40px; font:normal 14px "S_M"; color:#fff; background:#5A62FF; cursor:pointer;
