@@ -1,6 +1,6 @@
 ## 🔗 Demo
 
-[<img alt="데모 사이트 바로가기" src="/images/mockup-connective.png">](https://jaehyeokk.github.io/connective//)
+[<img src="/images/mockup-connective.png">](https://jaehyeokk.github.io/connective/ "데모 사이트 바로가기")
 
 <br />
 
